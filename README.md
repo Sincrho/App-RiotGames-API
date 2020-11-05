@@ -6,6 +6,7 @@ Configuracion entorno
     Instalar requerimientos: pipenv install
                              pipenv run pip install SQLAlchemy
                              pipenv run pip install flask_sqlalchemy
+                             pipenv run pip install flask_marshmallow
 
     Iniciar servidor: pipenv run python -m flask run
     
