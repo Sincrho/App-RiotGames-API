@@ -8,6 +8,9 @@ Configuracion entorno
                              pipenv run pip install flask_sqlalchemy
                              pipenv run pip install flask_marshmallow
 
+    Modo Debug en Powershell: $env:FLASK_ENV = "development"
+    
     Iniciar servidor: pipenv run python -m flask run
+    
     
     
