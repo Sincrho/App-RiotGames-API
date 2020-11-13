@@ -14,7 +14,7 @@ db = SQLAlchemy(app)
 # Init marshmallow
 ma = Marshmallow(app)
 
-#Inicio marshmallow
+#Inicio marshmalloW
 class Jugadores(db.Model):
     id_jugador = db.Column(db.Integer, primary_key=True)
     id_servidor = db.Column(db.String(10), nullable=False)
