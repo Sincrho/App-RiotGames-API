@@ -160,6 +160,42 @@ def get_torneo(id_torneo):
   torneo = Torneos.query.get(id_torneo)
   return torneo_schema.jsonify(torneo)
 
+@app.route('/get_torneo/<id_t>', methods=['GET'])
+def get_torneo(id_torneo):
+  torneo = Torneos.query.get(id_torneo)
+  return torneo_schema.jsonify(torneo)
+
+
+
+@app.route('/get_equis_tornes', methods=['GET'])
+def get_equis_tornes():
+   all_equis_tornes = Equi_torne.query.all()
+   result = equi_torneos_schema.dump(all_equis_tornes)
+   return jsonify(result)
+
+
+
+
+@app.route('/get_equis_torne/<id_torneo>', methods=['GET']) #obtener todos los jugadores de un equipo
+def get_equis_torne(id_torneo):
+  equi_torne = Equi_torne.query.get(id_torneo)
+  return jsonify (equi_torneos_schema.dump(equi_torne))
+
+
+
+@app.route('/add_equi_torne', methods=['POST'])
+def add_equi_torne():
+  id_equipo = request.json['id_equipo']
+  id_torneo = request.json['id_torneo']
+
+  new_equi_torne = Equi_torne(id_equipo, id_torneo)
+
+  db_session.add(new_equi_torne)
+  db_session.commit()
+  return jsonify(equi_torne_schema.dump(new_equi_torne))
+  
+
+
 
 class Partidas(db.Model):
     id_partida = db.Column(db.Integer, primary_key=True)
@@ -231,6 +267,55 @@ torneo_schema = TorneoSchema()
 torneos_schema = TorneoSchema(many=True)
 partida_schema = PartidaSchema()
 partidas_schema = PartidaSchema(many=True)
+
+
+@app.route('/jugador/<id>', methods=['PUT'])
+def update_jugador(id):
+  jugador = Jugadores.query.get(id)
+
+  id_servidor = request.json['id_servidor']
+  nombre_jugador = request.json['nombre_jugador']
+
+  jugador.id_servidor = id_servidor
+  jugador.nombre_jugador = nombre_jugador
+  db.session.commit()
+
+  return jugador_schema.jsonify(jugador)
+
+----------------------------------------------------
+@app.route('/equipo/<id>', methods=['PUT'])
+def update_equipo(id):
+  equipo = Equipos.query.get(id)
+
+
+  nombre_equipo = request.json['nombre_equipo']
+  equipo.nombre_equipo = nombre_equipo
+  db.session.commit()
+  return equipo_schema.jsonify(equipo)
+
+----------------------------------------------------
+
+@app.route('/torneo/<id>', methods=['PUT'])
+def update_torneo(id):
+  torneo = Torneos.query.get(id)
+
+  nombre_torneo = request.json['nombre_torneo']
+  torneo.nombre_equipo = nombre_torneo
+  db.session.commit()
+  return torneo_schema.jsonify(torneo)
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+
+@app.route('/partida/<id>', methods=['PUT'])
+def update_partida(id):
+  partida = Partidas.query.get(id)
+
+  resultado_partida = request.json['resultado_partida']
+  partida.resultado_partida = resultado_partida
+  db.session.commit()
+  return partida_schema.jsonify(partida)
+
 
 
 
