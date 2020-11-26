@@ -1,11 +1,9 @@
 from marshmallow import Schema,fields
 
-#Esquema de Jugador
 class JugadorSchema(Schema):
   class Meta:
     fields = ('id_jugador', 'id_servidor', 'nombre_jugador')
 
-#Esquema de Equipo
 class EquipoSchema(Schema):
   class Meta:
     fields = ('id_equipo', 'nombre_equipo')
@@ -21,3 +19,16 @@ class TorneoSchema(Schema):
 class PartidaSchema(Schema):
   class Meta:
     fields = ('id_partida', 'resultado_partida')
+
+class Equi_jugaSchema(Schema):
+  class Meta:
+    fields = ('id_equipo', 'id_jugador')
+
+class Equi_torneoSchema(Schema):
+  class Meta:
+    fields = ('id_equipo', 'id_torneo')
+
+class Equi_torneo_partidaSchema(Schema):
+  class Meta:
+    fields = ('id_equipo', 'id_torneo', 'id_partida')
+

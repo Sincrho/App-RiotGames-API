@@ -5,7 +5,7 @@ from api.model.database import Base
 class Jugadores(Base):
     __tablename__ = 'Jugadores'
     id_jugador = Column(Integer, primary_key=True)
-    id_servidor = Column(String(10), nullable=False, ForeignKey('Servidores.id_servidor'))
+    id_servidor = Column(String(10), ForeignKey('Servidores.id_servidor'), nullable=False,)
     nombre_jugador = Column(String(50))
 
     def __init__(self, id_jugador, id_servidor, nombre_jugador):
@@ -66,8 +66,8 @@ class Torneos(Base):
 
 class Equi_juga(Base):
     __tablename__ = 'equi_juga'
-    id_equipo = Column( Integer, primary_key=True, ForeignKey('Equipos.id_equipo'))
-    id_jugador = Column( Integer, primary_key=True, ForeignKey('Jugadores.id_jugador'))
+    id_equipo = Column( Integer, ForeignKey('Equipos.id_equipo'),primary_key=True,)
+    id_jugador = Column( Integer, ForeignKey('Jugadores.id_jugador'), primary_key=True)
 
     def __init__(self, id_equipo, id_jugador):
         self.id_equipo = id_equipo
@@ -78,8 +78,8 @@ class Equi_juga(Base):
 
 class Equi_torneo(Base):
     __tablename__ = 'equi_torneo'
-    id_equipo = Column( Integer, primary_key=True, ForeignKey('Equipos.id_equipo'))
-    id_torneo = Column( Integer, primary_key=True, ForeignKey('Torneos.id_torneo'))
+    id_equipo = Column( Integer, ForeignKey('Equipos.id_equipo'), primary_key=True)
+    id_torneo = Column( Integer, ForeignKey('Torneos.id_torneo'), primary_key=True)
 
     def __init__(self, id_equipo, id_torneo):
         self.id_equipo = id_equipo
@@ -90,9 +90,9 @@ class Equi_torneo(Base):
 
 class Equi_torneo_partida(Base):
     __tablename__ = 'equi_torneo_partida'
-    id_equipo =  Column( Integer, primary_key=True, ForeignKey('equi_torneo.id_equipo'))
-    id_torneo =  Column( Integer, primary_key=True, ForeignKey('equi_torneo.id_torneo'))
-    id_partida =  Column( Integer, primary_key=True, ForeignKey('Partidas.id_partida'))
+    id_equipo =  Column( Integer, ForeignKey('equi_torneo.id_equipo'), primary_key=True)
+    id_torneo =  Column( Integer, ForeignKey('equi_torneo.id_torneo'), primary_key=True)
+    id_partida =  Column( Integer, ForeignKey('Partidas.id_partida'), primary_key=True)
 
     def __init__(self, id_equipo, id_torneo, id_partida):
         self.id_equipo = id_equipo
