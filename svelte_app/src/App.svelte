@@ -1,8 +1,22 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js">
 	import Router, {location, link} from 'svelte-spa-router';
-	import Jugadores from './Jugadores.svelte';
+  import Jugadores from './Jugadores.svelte';
+  import Torneos from './Torneos.svelte';
+  import Partidas from './Partidas.svelte';
+  import Equipos from './Equipos.svelte';
+
   import EditarJugador from './EditarJugador.svelte';
-  
+  import EditarTorneo from './EditarTorneo.svelte';
+  import EditarPartida from './EditarPartida.svelte';
+  import EditarEquipo from './EditarEquipo.svelte';
+
+  import NuevoJugador from './NuevoJugador.svelte';
+  import NuevoEquipo from './NuevoEquipo.svelte';
+  import NuevoTorneo from './NuevoTorneo.svelte';
+  import NuevaPartida from './NuevaPartida.svelte';
+
+  import PerfilJugador from './PerfilJugador.svelte';
+
 </script>
 
 
@@ -16,13 +30,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </svelte:head>
 
+
+
+
 <nav>
-  <div class="nav-wrapper #283593 indigo darken-3">
-    <a href="#!" class="brand-logo"><i class="material-icons">cloud</i>App Rito</a>
+  <div class="nav-wrapper  blue darken-1">
+    <a href="#!" class="brand-logo large"><i class="material-icons">videogame_asset</i>Tournament Manager</a>
     <ul class="right hide-on-med-and-down">
-      <li><a href="sass.html"><i class="material-icons">search</i></a></li>
-      <li><a href="/#/Jugadores">JUGA<i class="material-icons">view_module</i></a></li>
-      <li><a href="/#/EditarJugador/:ID_Jugador">EJUGA<i class="material-icons">refresh</i></a></li>
+      <li><a href="/#/Jugadores" style="color:white">Jugadores <i class="material-icons right white-text">person_outline</i></a></li>
+      <li><a href="/#/Torneos" style="color:white">Torneos <i class="material-icons right white-text">emoji_events</i></a></li>
+      <li><a href="/#/Equipos" style="color:white">Equipos <i class="material-icons right white-text">groups</i></a></li>
+      <li><a href="/#/Partidas" style="color:white">Partidas <i class="material-icons right white-text">sports_mma</i></a></li>
     </ul>
   </div>
 </nav>
@@ -30,7 +48,22 @@
 <Router routes={{
 	'/': Jugadores,
 	'/EditarJugador/:ID_Jugador': EditarJugador,
-	'/Jugadores': Jugadores
+  '/Jugadores': Jugadores,
+  '/NuevoJugador': NuevoJugador,
+
+  '/EditarTorneo/:ID_Torneo': EditarTorneo,
+  '/EditarPartida/:ID_Partida': EditarPartida,
+  '/EditarEquipo/:ID_Equipo': EditarEquipo,
+ 
+  '/Torneos': Torneos,
+  '/Partidas': Partidas,
+  '/Equipos': Equipos,
+
+
+  '/NuevoEquipo':NuevoEquipo,
+  '/NuevoTorneo':NuevoTorneo,
+  '/NuevaPartida': NuevaPartida,
+  '/PerfilJugador/:ID_Servidor': PerfilJugador
 }} />
 
 

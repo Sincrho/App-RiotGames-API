@@ -7,8 +7,6 @@ from flask_cors import CORS
 app = Flask(__name__)
 CORS(app)
 
-
-
 app.add_url_rule('/', view_func=views.index,methods=['GET'])
 
 #Routes para jugadores cors = CORS(app, resources={r"*": {"origins": "*"}})
@@ -62,6 +60,9 @@ app.add_url_rule('/delete_equi_torneo/<id_equipo>/<id_torneo>', view_func=views.
 #Routes para equi_torneo_partida
 
 #app.add_url_rule('/delete_equi_torneo_partida/<id_equipo>/<id_torneo>/<id_partida>', view_func=views.delete_equi_torneo_partida, methods=['DELETE'])
+
+#Routes para perfil
+app.add_url_rule('/get_perfil/<id_servidor>/<nombre_jugador>', view_func=views.get_perfil, methods=['GET'])
 
 
 

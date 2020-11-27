@@ -1,5 +1,5 @@
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js">
-
+<script>
+  
   import Router, {location, link} from 'svelte-spa-router';
   import editarJugador from './EditarJugador.svelte';
 
@@ -41,40 +41,46 @@
             
 <svelte:head>
   <!--Import Google Icon Font-->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <!--Import materialize.css-->
-  <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <!--Import materialize.css-->         
   <!--Let browser know website is optimized for mobile-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </svelte:head>
 
 
 <main>
-  <body>
-      <table class="highlight">
-        <thead class="#7986cb indigo lighten-2">
-          <tr>
-            <th on:click={sort("id_jugador")}>id_jugador</th>
-            <th on:click={sort("id_servidor")}>id_servidor</th>
-            <th on:click={sort("nombre_jugador")}>nombre_jugador</th>
-            <th></th>
-          </tr>
-        </thead>
-        <tbody class ="#c5cae9 indigo lighten-4">
-          {#each data as row}
+  <body style="background-image: url(https://lolstatic-a.akamaihd.net/rso-login-page/2.9.34/assets/riot_desktop_background_2x.jpg)">
+      <div class="container" style="padding-top:7%">  
+        <table class="highlight centered ">
+          <thead class="blue darken-1 white-text">
             <tr>
-              <td>{row.id_jugador}</td>
-              <td>{row.id_servidor}</td>
-              <td>{row.nombre_jugador}</td>
-              <td><a href="/#/EditarJugador/{row.id_jugador}"><i class="material-icons left">edit</i></a></td>
+              <th on:click={sort("id_servidor")}>Servidor</th>
+              <th on:click={sort("nombre_jugador")}>Jugador</th>
+              <th></th>
             </tr>
-          {/each}
-        </tbody>
-        <button class="btn waves-effect waves-light" type="submit" name="action" onclick="location.href='nuevapersona.php'" ><i class="material-icons right">AGREGAR PERSONA</i> </button>    
-      </table>
-  </body>        
+          </thead>
+          <tbody class ="blue-grey lighten-4">
+            {#each data as row}
+              <tr>
+                <td>{row.id_servidor}</td>
+              <td><a href="/#/PerfilJugador/{row.id_servidor}*{row.nombre_jugador}">{row.nombre_jugador}</a></td>
+                <td><a href="/#/EditarJugador/{row.id_jugador}"><i class="material-icons left blue-text">edit</i></a></td>
+              </tr>
+            {/each}
+          </tbody>
+
+        </table>
+       
+       
+        <a href="/#/NuevoJugador" class="btn-floating btn-large waves-effect waves- blue darken-1"><i class="material-icons left">add</i></a>
+
+      </div>
+
+        
+  </body>
+                
 </main>
+
+
 
 
 
