@@ -11,6 +11,7 @@
   onMount(async function() {
         const response = await fetch(apiURL);
         data = await response.json();
+        console.log(data)
     });
     let sortBy = {col: "id_jugador", ascending: true};
     
@@ -58,16 +59,16 @@
               <th></th>
             </tr>
           </thead>
-          <tbody class ="blue-grey lighten-4">
+          <!-- <tbody class ="blue-grey lighten-4">-->   
+          <tbody style = "background: rgba(0,0,0,0.5);">
             {#each data as row}
               <tr>
-                <td>{row.id_servidor}</td>
+                <td class="blue-text">{row.id_servidor}</td>
               <td><a href="/#/PerfilJugador/{row.id_servidor}*{row.nombre_jugador}">{row.nombre_jugador}</a></td>
                 <td><a href="/#/EditarJugador/{row.id_jugador}"><i class="material-icons left blue-text">edit</i></a></td>
               </tr>
             {/each}
           </tbody>
-
         </table>
        
        

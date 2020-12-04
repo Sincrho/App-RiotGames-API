@@ -2,10 +2,8 @@ from flask import render_template, url_for, request, jsonify
 from api.model.database import db_session
 from api.model.tables import *
 from api.schema.schemas import *
-
 import requests
 import json
-
 #Iniciar esquemas
 jugador_schema = JugadorSchema()
 jugadores_schema = JugadorSchema(many=True)
@@ -29,8 +27,8 @@ equi_torneo_schema = Equi_torneoSchema()
 equi_torneos_schema = Equi_torneoSchema(many=True)
 
 
-equi_torneo__partida_schema = Equi_torneo_partidaSchema ()
-equi_torneo__partidas_schema = Equi_torneo_partidaSchema (many=True)
+equi_torneo_partida_schema = Equi_torneo_partidaSchema ()
+equi_torneo_partidas_schema = Equi_torneo_partidaSchema (many=True)
 
 #FUNCIONES PARA JUGADOR
 def add_jugador():
@@ -43,11 +41,12 @@ def add_jugador():
   db_session.add(new_jugador)
   db_session.commit()
 
-  return jsonify(jugador_schema.dump(new_jugador))
+  return jsonify(jugador_schema.dumps(new_jugador))
 
 def get_jugadores():
   all_jugadores = Jugadores.query.all()
-  return jsonify(jugadores_schema.dump(all_jugadores))
+  result = jugadores_schema.dump(all_jugadores)
+  return jsonify(result)
 
 def get_jugador(id_jugador):
   jugador = Jugadores.query.get(id_jugador)
@@ -63,7 +62,7 @@ def update_jugador(id_jugador):
   jugador.nombre_jugador = nombre_jugador
   db_session.commit()
 
-  return jsonify(jugador_schema.dump(jugador))
+  return jsonify(jugador_schema.dumps(jugador))
 
 
 def delete_jugador(id_jugador):
@@ -71,7 +70,7 @@ def delete_jugador(id_jugador):
   db_session.delete(jugador)
   db_session.commit()
 
-  return jsonify(jugador_schema.dump(jugador))
+  return jsonify(jugador_schema.dumps(jugador))
 
 
 #FUNCIONES PARA EQUIPO
@@ -79,17 +78,17 @@ def delete_jugador(id_jugador):
 def add_equipo():
   id_equipo = request.json['id_equipo']
   nombre_equipo = request.json['nombre_equipo']
-  
+
   new_equipo = Equipos(id_equipo, nombre_equipo)
 
-  session.add(new_equipo)
-  session.commit()
-
-  return jsonify(equipo_schema.dump(new_equipo))
+  db_session.add(new_equipo)
+  db_session.commit()
+  return jsonify(equipo_schema.dumps(new_equipo))
 
 def get_equipos():
   all_equipos = Equipos.query.all()
-  return jsonify(equipos_schema.dump(all_equipos))
+  result = equipos_schema.dump(all_equipos)
+  return jsonify(result)
 
 def get_equipo(id_equipo):
   equipo = Equipos.query.get(id_equipo)
@@ -124,7 +123,8 @@ def add_servidor():
 
 def get_servidores():
   all_servidores = Servidores.query.all()
-  return jsonify(servidores_schema.dump(all_servidores))
+  result = servidores_schema.dump(all_servidores)
+  return jsonify(result)
 
 def get_servidor(id_servidor):
   servidor = Servidores.query.get(id_servidor)
@@ -143,8 +143,9 @@ def add_torneo():
   return jsonify(torneo_schema.dump(new_torneo))
 
 def get_torneos():
-  all_torneos = Torneos.query.all() 
-  return jsonify(torneos_schema.dump(all_torneos))
+  all_torneos = Torneos.query.all()
+  result = torneos_schema.dump(all_torneos)
+  return jsonify(result)
 
 def get_torneo(id_torneo):
   torneo = Torneos.query.get(id_torneo)
@@ -162,7 +163,7 @@ def delete_torneo(id_torneo):
   db_session.delete(torneo)
   db_session.commit()
 
-  return jsonify(torneo_schema.dump(torneo))
+  return jsonify(torneo_schema.dumps(torneo))
 
 #FUNCIONES PARA PARTIDAS
 
@@ -175,9 +176,19 @@ def add_partida():
   db_session.add(new_partida)
   db_session.commit()
 
-  return jsonify(partida_schema.dump(new_partida))
+  return jsonify(partida_schema.dumps(new_partida))
 
 def get_partidas():
+  """ devuelve las partidas 
+  ---
+   parameters:
+     - name: parametro
+   responses:
+      200:
+          description: trajo todas las partidas
+          examples:
+            result: [1,2,3]          
+  """
   all_partidas = Partidas.query.all()
   result = partidas_schema.dump(all_partidas)
   return jsonify(result)
@@ -214,11 +225,8 @@ def add_equi_juga():
 
 def get_equis_jugas():
    all_equi_juga = Equi_juga.query.all()
-   return jsonify(equi_jugas_schema.dump(all_equi_juga))
-
-def get_equi_jugas(id_equipo):
-  equi_jugas = Equi_juga.query.filter(Equi_juga.id_equipo==id_equipo)
-  return jsonify(equi_jugas_schema.dump(equi_jugas))
+   result = equi_jugas_schema.dump(all_equi_juga)
+   return jsonify(result)
 
 def delete_equi_juga(id_equipo, id_jugador):
   equi_juga = Equi_juga.query.get((id_equipo, id_jugador))
@@ -226,6 +234,10 @@ def delete_equi_juga(id_equipo, id_jugador):
   db_session.commit()
 
   return jsonify(equi_juga_schema.dump(equi_juga))
+
+def get_equi_jugas(id_equipo):
+  equi_jugas = Equi_juga.query.filter(Equi_juga.id_equipo==id_equipo)
+  return jsonify(equi_jugas_schema.dump(equi_jugas))
 
 #FUNCIONES PARA EQUI_TORNEO
 
@@ -244,9 +256,10 @@ def get_equis_torneos():
    result = equi_torneos_schema.dump(all_equis_tornes)
    return jsonify(result)
 
+
 def get_equis_torneo(id_torneo):
-  equi_torne = Equi_torneo.query.get(id_torneo)
-  return jsonify (equi_torneos_schema.dump(equi_torne))
+  equis_torneo = Equi_torneo.query.filter(Equi_torneo.id_torneo==id_torneo)
+  return jsonify(equi_torneos_schema.dump(equis_torneo))
 
 def delete_equi_torneo(id_equipo, id_torneo):
   equi_torneo = Equi_torneo.query.get((id_equipo, id_torneo))
@@ -263,20 +276,39 @@ def delete_equi_torneo_partida(id_equipo, id_torneo, id_partida):
 
   return jsonify(equi_torneo_partida_schema.dump(equi_torneo_partida))
 
-#FUNCIONES QUE LLAMAN A RITO
+def get_equis_torneo_partidas(id_torneo):
+  equis_torneo_partidas = Equi_torneo_partida.query.filter(Equi_torneo_partida.id_torneo==id_torneo)
+  return jsonify(equi_torneo_partidas_schema.dump(equis_torneo_partidas))
+
+def get_equis_torneos_partidas():
+   all_equis_torneos_partidas = Equi_torneo_partida.query.all()
+   result = equi_torneo_partidas_schema.dump(all_equis_torneos_partidas)
+   return jsonify(result)
+
+
+def add_equi_torneo_partida():
+  id_equipo = request.json['id_equipo']
+  id_torneo = request.json['id_torneo']
+  id_partida = request.json['id_partida']
+  new_equi_torneo_partida = Equi_torneo_partida(id_equipo, id_torneo, id_partida)
+  db_session.add(new_equi_torneo_partida)
+  db_session.commit()
+  return jsonify(equi_torneo_partida_schema.dump(new_equi_torneo_partida))
+
+#FUNCIONES PARA PEGARLE A RITO
 
 def get_perfil(id_servidor,nombre_jugador):
-  apiKey="RGAPI-5377286f-f8ec-4af6-bd3a-f2b003a07657"
+  apiKey=""
   request_summoner  = requests.get("https://"+id_servidor+".api.riotgames.com/lol/summoner/v4/summoners/by-name/"+nombre_jugador+"?api_key="+apiKey)
-
   summoner=json.loads(request_summoner.text)
   summoner_id=summoner["id"]
-
-  request_league= requests.get("https://la2.api.riotgames.com/lol/league/v4/entries/by-summoner/"+summoner_id+"?api_key="+apiKey)
-
+  request_league= requests.get("https://"+id_servidor+".api.riotgames.com/lol/league/v4/entries/by-summoner/"+summoner_id+"?api_key="+apiKey)
   json_perfil = jsonify(request_league.text)
-
   return json_perfil
+
+
+
+
 
 #Inicio
 def index():

@@ -17,14 +17,13 @@
     export let params
     
     let idEquipo = params.ID_Equipo
-    console.log(idEquipo)
     
     onMount(async function() {
            const response = await fetch(apiURL+idEquipo);
            let json  = await response.json();
            dataEquipo = json;
            console.log(dataEquipo)
-      }); 
+    }); 
   
     async function actualizarEquipo() {
 
@@ -109,3 +108,35 @@
     </div>
   </div>
 </body>
+
+
+
+<body style="background-image: url(https://lolstatic-a.akamaihd.net/rso-login-page/2.9.34/assets/riot_desktop_background_2x.jpg)">
+      <div class="container" style="padding-top:7%">  
+        <table class="highlight centered ">
+          <thead class="blue darken-1 white-text">
+            <tr>
+              <th on:click={sort("id_servidor")}>Servidor</th>
+              <th on:click={sort("nombre_jugador")}>Jugador</th>
+              <th></th>
+            </tr>
+          </thead>
+          <!-- <tbody class ="blue-grey lighten-4">-->   
+          <tbody style = "background: rgba(0,0,0,0.5);">
+            {#each data as row}
+              <tr>
+                <td class="blue-text">{row.id_servidor}</td>
+              <td><a href="/#/PerfilJugador/{row.id_servidor}*{row.nombre_jugador}">{row.nombre_jugador}</a></td>
+                <td><a href="/#/EditarJugador/{row.id_jugador}"><i class="material-icons left blue-text">edit</i></a></td>
+              </tr>
+            {/each}
+          </tbody>
+        </table>
+       
+       
+        <a href="/#/NuevoJugador" class="btn-floating btn-large waves-effect waves- blue darken-1"><i class="material-icons left">add</i></a>
+
+      </div>
+
+        
+  </body>

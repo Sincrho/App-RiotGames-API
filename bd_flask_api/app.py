@@ -4,8 +4,12 @@ from api.route import views
 from flask_cors import CORS
 
 
+
 app = Flask(__name__)
+swagger = Swagger(app)
 CORS(app)
+
+
 
 app.add_url_rule('/', view_func=views.index,methods=['GET'])
 
@@ -55,15 +59,15 @@ app.add_url_rule('/get_equis_torneos', view_func=views.get_equis_torneos, method
 app.add_url_rule('/get_equis_torneo/<id_torneo>', view_func=views.get_equis_torneo, methods=['GET'])
 app.add_url_rule('/delete_equi_torneo/<id_equipo>/<id_torneo>', view_func=views.delete_equi_torneo, methods=['DELETE'])
 
-
+#Routes para perfil
+app.add_url_rule('/get_perfil/<id_servidor>/<nombre_jugador>', view_func=views.get_perfil, methods=['GET'])
 
 #Routes para equi_torneo_partida
 
 #app.add_url_rule('/delete_equi_torneo_partida/<id_equipo>/<id_torneo>/<id_partida>', view_func=views.delete_equi_torneo_partida, methods=['DELETE'])
-
-#Routes para perfil
-app.add_url_rule('/get_perfil/<id_servidor>/<nombre_jugador>', view_func=views.get_perfil, methods=['GET'])
-
+app.add_url_rule('/get_equis_torneo_partidas/<id_torneo>', view_func=views.get_equis_torneo_partidas, methods=['GET'])
+app.add_url_rule('/get_equis_torneos_partidas', view_func=views.get_equis_torneos_partidas, methods=['GET'])
+app.add_url_rule('/add_equi_torneo_partida', view_func=views.add_equi_torneo_partida, methods=['POST'])
 
 
 if __name__ == '__main__':

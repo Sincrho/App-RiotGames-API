@@ -66,14 +66,14 @@
 <body style="background-image: url(https://lolstatic-a.akamaihd.net/rso-login-page/2.9.34/assets/riot_desktop_background_2x.jpg)" >
   <div class="container">
     
-      <div class=" card blue-grey lighten-5">
+      <div class=" card blue-grey lighten-5" >
      
-        <div class="card-content">
+        <div class="card-content " style = "background: rgba(0,0,0,0.5);" >
          <h1>{parametros[1]} </h1>
         </div>
         
 
-        <div class = "row">
+        <div class = "row"   style = "background: rgba(0,0,0,0.5);">
           <div class="col s2">
           </div>
 
@@ -86,20 +86,20 @@
        </div>
 
     
-        <div class=card-content >
-          <div class ="row">
+        <div style = "background: rgba(0,0,0,0.5);" class="card-content" >
+          <div class ="row " >
             <div class="col s3">
             </div>
           
 
             {#each dataPerfil as perfil }
-              <div class="col s4">
+              <div class="col s4" >
                 <span align="center" class="centered flow-text">{"Rango: "+perfil.tier +"   "+ perfil.rank+"\n"}</span>
               </div>
             {/each}
           </div> 
 
-          <div class= "row">
+          <div class= "row ">
             <div class="col s3">
             </div>
            

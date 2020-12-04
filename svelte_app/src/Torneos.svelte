@@ -58,10 +58,10 @@
                 <th></th>
               </tr>
             </thead>
-            <tbody class ="blue-grey lighten-4">
+            <tbody style = "background: rgba(0,0,0,0.5);">
               {#each data as row}
                 <tr>
-                  <td>{row.nombre_torneo}</td>
+                  <td ><a href="/#/PerfilTorneo/{row.id_torneo}">{row.nombre_torneo}</a></td>
                   <td><a href="/#/EditarTorneo/{row.id_torneo}"><i class="material-icons left blue-text">edit</i></a></td>
                 </tr>
               {/each}

@@ -16,7 +16,8 @@
   import NuevaPartida from './NuevaPartida.svelte';
 
   import PerfilJugador from './PerfilJugador.svelte';
-
+  import PerfilEquipo from  './PerfilEquipo.svelte';
+  import PerfilTorneo from  './PerfilTorneo.svelte';
 </script>
 
 
@@ -63,7 +64,12 @@
   '/NuevoEquipo':NuevoEquipo,
   '/NuevoTorneo':NuevoTorneo,
   '/NuevaPartida': NuevaPartida,
-  '/PerfilJugador/:ID_Servidor': PerfilJugador
+  '/PerfilJugador/:ID_Servidor': PerfilJugador,
+  '/PerfilEquipo/:ID_Equipo': PerfilEquipo,
+  '/PerfilTorneo/:ID_torneo': PerfilTorneo
+
+   
+
 }} />
 
 
