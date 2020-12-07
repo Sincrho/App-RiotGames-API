@@ -51,20 +51,7 @@
       console.log(result)
       location.href = "/#/Partidas";
     }
-  
-    async function crearPartida() {
-      const response= await fetch(apiURLx,{
-              method: 'POST', 
-              headers: {'Content-Type' : 'application/json'},
-              body:JSON.stringify({
-                "id_partida": null,
-                "resultado_partida": "SHANTI DE LA AUSTRALIO"
-              })
-          });
-      const json = await response.json()
-      let result = JSON.stringify(json)
-      console.log(result)
-    }   
+    
 </script>
   
        
@@ -96,7 +83,7 @@
           </div>
           <div class = "container">    
               <button  class ="waves-effect waves-light btn   blue darken-1" on:click={()=> actualizarPartida()}><i class="material-icons left ">check_circle</i>Confirmar</button>
-              <button  class ="waves-effect waves-light btn   blue darken-1" on:click={()=> eliminarPartida()}><i class="material-icons left ">delete</i>Eliminar</button>
+            <!--  <button  class ="waves-effect waves-light btn   blue darken-1" on:click={()=> eliminarPartida()}><i class="material-icons left ">delete</i>Eliminar</button> -->
           </div>    
 
         </div>

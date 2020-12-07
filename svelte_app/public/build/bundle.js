@@ -3916,13 +3916,9 @@ var app = (function () {
     	let label;
     	let t8;
     	let div3;
-    	let button0;
-    	let i0;
+    	let button;
+    	let i;
     	let t10;
-    	let t11;
-    	let button1;
-    	let i1;
-    	let t13;
     	let mounted;
     	let dispose;
 
@@ -3954,75 +3950,66 @@ var app = (function () {
     			label.textContent = "Resultado Partida";
     			t8 = space();
     			div3 = element("div");
-    			button0 = element("button");
-    			i0 = element("i");
-    			i0.textContent = "check_circle";
+    			button = element("button");
+    			i = element("i");
+    			i.textContent = "check_circle";
     			t10 = text("Confirmar");
-    			t11 = space();
-    			button1 = element("button");
-    			i1 = element("i");
-    			i1.textContent = "delete";
-    			t13 = text("Eliminar");
     			attr_dev(link0, "href", "https://fonts.googleapis.com/icon?family=Material+Icons");
     			attr_dev(link0, "rel", "stylesheet");
-    			add_location(link0, file$6, 73, 4, 2234);
+    			add_location(link0, file$6, 60, 4, 1769);
     			attr_dev(link1, "type", "text/css");
     			attr_dev(link1, "rel", "stylesheet");
     			attr_dev(link1, "href", "css/materialize.min.css");
     			attr_dev(link1, "media", "screen,projection");
-    			add_location(link1, file$6, 75, 4, 2361);
+    			add_location(link1, file$6, 62, 4, 1896);
     			attr_dev(link2, "rel", "stylesheet");
     			attr_dev(link2, "href", "https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css");
-    			add_location(link2, file$6, 76, 4, 2465);
+    			add_location(link2, file$6, 63, 4, 2000);
     			attr_dev(meta, "name", "viewport");
     			attr_dev(meta, "content", "width=device-width, initial-scale=1.0");
-    			add_location(meta, file$6, 78, 4, 2644);
+    			add_location(meta, file$6, 65, 4, 2179);
     			attr_dev(span0, "class", "card-title center ");
     			set_style(span0, "color", "#263238 ");
     			set_style(span0, "font-size", "2em");
     			set_style(span0, "font-weight", "bolder");
-    			add_location(span0, file$6, 86, 10, 3078);
+    			add_location(span0, file$6, 73, 10, 2613);
     			attr_dev(span1, "class", "card-title center ");
     			set_style(span1, "color", "#263238 ");
     			set_style(span1, "font-size", "1em");
     			set_style(span1, "font-weight", "bolder");
-    			add_location(span1, file$6, 87, 8, 3204);
+    			add_location(span1, file$6, 74, 8, 2739);
     			attr_dev(div0, "class", "card-content black-text thick ");
-    			add_location(div0, file$6, 85, 8, 3021);
+    			add_location(div0, file$6, 72, 8, 2556);
     			set_style(input, "border-radius", "20px");
     			attr_dev(input, "placeholder", input_placeholder_value = /*dataPartida*/ ctx[0].resultado_partida);
     			attr_dev(input, "id", "first_name");
     			attr_dev(input, "type", "text");
     			attr_dev(input, "class", "white validate black-text");
-    			add_location(input, file$6, 92, 12, 3507);
+    			add_location(input, file$6, 79, 12, 3042);
     			attr_dev(label, "class", "active ");
     			attr_dev(label, "for", "first_name ");
-    			add_location(label, file$6, 93, 14, 3699);
+    			add_location(label, file$6, 80, 14, 3234);
     			attr_dev(div1, "class", "row input-field col s6 offset ");
-    			add_location(div1, file$6, 91, 12, 3449);
+    			add_location(div1, file$6, 78, 12, 2984);
     			attr_dev(div2, "class", "container");
-    			add_location(div2, file$6, 90, 10, 3411);
-    			attr_dev(i0, "class", "material-icons left ");
-    			add_location(i0, file$6, 97, 113, 3960);
-    			attr_dev(button0, "class", "waves-effect waves-light btn   blue darken-1");
-    			add_location(button0, file$6, 97, 14, 3861);
-    			attr_dev(i1, "class", "material-icons left ");
-    			add_location(i1, file$6, 98, 111, 4139);
-    			attr_dev(button1, "class", "waves-effect waves-light btn   blue darken-1");
-    			add_location(button1, file$6, 98, 14, 4042);
+    			add_location(div2, file$6, 77, 10, 2946);
+    			attr_dev(i, "class", "material-icons left ");
+    			add_location(i, file$6, 84, 113, 3495);
+    			attr_dev(button, "class", "waves-effect waves-light btn   blue darken-1");
+    			add_location(button, file$6, 84, 14, 3396);
     			attr_dev(div3, "class", "container");
-    			add_location(div3, file$6, 96, 10, 3816);
+    			add_location(div3, file$6, 83, 10, 3351);
     			attr_dev(div4, "class", "card-action");
-    			add_location(div4, file$6, 89, 8, 3374);
+    			add_location(div4, file$6, 76, 8, 2909);
     			attr_dev(div5, "class", "col s12 m4 l8 card blue-grey lighten-5");
-    			add_location(div5, file$6, 84, 6, 2959);
+    			add_location(div5, file$6, 71, 6, 2494);
     			attr_dev(div6, "class", "container");
-    			add_location(div6, file$6, 83, 4, 2926);
+    			add_location(div6, file$6, 70, 4, 2461);
     			attr_dev(div7, "class", "container ");
     			set_style(div7, "padding-top", "10%");
-    			add_location(div7, file$6, 82, 2, 2870);
+    			add_location(div7, file$6, 69, 2, 2405);
     			set_style(body, "background-image", "url(https://lolstatic-a.akamaihd.net/rso-login-page/2.9.34/assets/riot_desktop_background_2x.jpg)");
-    			add_location(body, file$6, 81, 0, 2735);
+    			add_location(body, file$6, 68, 0, 2270);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -4053,19 +4040,14 @@ var app = (function () {
     			append_dev(div1, label);
     			append_dev(div4, t8);
     			append_dev(div4, div3);
-    			append_dev(div3, button0);
-    			append_dev(button0, i0);
-    			append_dev(button0, t10);
-    			append_dev(div3, t11);
-    			append_dev(div3, button1);
-    			append_dev(button1, i1);
-    			append_dev(button1, t13);
+    			append_dev(div3, button);
+    			append_dev(button, i);
+    			append_dev(button, t10);
 
     			if (!mounted) {
     				dispose = [
-    					listen_dev(input, "input", /*input_input_handler*/ ctx[5]),
-    					listen_dev(button0, "click", /*click_handler*/ ctx[6], false, false, false),
-    					listen_dev(button1, "click", /*click_handler_1*/ ctx[7], false, false, false)
+    					listen_dev(input, "input", /*input_input_handler*/ ctx[4]),
+    					listen_dev(button, "click", /*click_handler*/ ctx[5], false, false, false)
     				];
 
     				mounted = true;
@@ -4111,21 +4093,6 @@ var app = (function () {
     const apiURL2$2 = "http://127.0.0.1:5000/update_partida/";
     const apiURL3$2 = "http://127.0.0.1:5000/delete_partida/";
     const apiURLx$2 = "http://127.0.0.1:5000/add_partida";
-
-    async function crearPartida() {
-    	const response = await fetch(apiURLx$2, {
-    		method: "POST",
-    		headers: { "Content-Type": "application/json" },
-    		body: JSON.stringify({
-    			"id_partida": null,
-    			"resultado_partida": "SHANTI DE LA AUSTRALIO"
-    		})
-    	});
-
-    	const json = await response.json();
-    	let result = JSON.stringify(json);
-    	console.log(result);
-    }
 
     function instance$7($$self, $$props, $$invalidate) {
     	let dataPartida = [];
@@ -4181,10 +4148,9 @@ var app = (function () {
     	}
 
     	const click_handler = () => actualizarPartida();
-    	const click_handler_1 = () => eliminarPartida();
 
     	$$self.$$set = $$props => {
-    		if ("params" in $$props) $$invalidate(4, params = $$props.params);
+    		if ("params" in $$props) $$invalidate(3, params = $$props.params);
     	};
 
     	$$self.$capture_state = () => ({
@@ -4198,14 +4164,13 @@ var app = (function () {
     		params,
     		idPartida,
     		actualizarPartida,
-    		eliminarPartida,
-    		crearPartida
+    		eliminarPartida
     	});
 
     	$$self.$inject_state = $$props => {
     		if ("dataPartida" in $$props) $$invalidate(0, dataPartida = $$props.dataPartida);
     		if ("resultadoPartidaNuevo" in $$props) $$invalidate(1, resultadoPartidaNuevo = $$props.resultadoPartidaNuevo);
-    		if ("params" in $$props) $$invalidate(4, params = $$props.params);
+    		if ("params" in $$props) $$invalidate(3, params = $$props.params);
     		if ("idPartida" in $$props) idPartida = $$props.idPartida;
     	};
 
@@ -4217,18 +4182,16 @@ var app = (function () {
     		dataPartida,
     		resultadoPartidaNuevo,
     		actualizarPartida,
-    		eliminarPartida,
     		params,
     		input_input_handler,
-    		click_handler,
-    		click_handler_1
+    		click_handler
     	];
     }
 
     class EditarPartida extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$7, create_fragment$7, safe_not_equal, { params: 4 });
+    		init(this, options, instance$7, create_fragment$7, safe_not_equal, { params: 3 });
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
@@ -4240,7 +4203,7 @@ var app = (function () {
     		const { ctx } = this.$$;
     		const props = options.props || {};
 
-    		if (/*params*/ ctx[4] === undefined && !("params" in props)) {
+    		if (/*params*/ ctx[3] === undefined && !("params" in props)) {
     			console_1$7.warn("<EditarPartida> was created without expected prop 'params'");
     		}
     	}
@@ -6674,55 +6637,88 @@ var app = (function () {
 
     function get_each_context$9(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[8] = list[i];
+    	child_ctx[13] = list[i];
     	return child_ctx;
     }
 
     function get_each_context_1$1(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[8] = list[i];
+    	child_ctx[13] = list[i];
     	return child_ctx;
     }
 
-    // (87:8) {#each dataEquipos as row}
+    // (131:8) {#each dataEquipos as row}
     function create_each_block_1$1(ctx) {
     	let tr;
-    	let td;
-    	let a;
-    	let t0_value = /*row*/ ctx[8].nombre_equipo + "";
+    	let td0;
+    	let a0;
+    	let t0_value = /*row*/ ctx[13].nombre_equipo + "";
     	let t0;
-    	let a_href_value;
+    	let a0_href_value;
     	let t1;
+    	let td1;
+    	let a1;
+    	let i;
+    	let a1_href_value;
+    	let t3;
+    	let mounted;
+    	let dispose;
+
+    	function click_handler(...args) {
+    		return /*click_handler*/ ctx[6](/*row*/ ctx[13], ...args);
+    	}
 
     	const block = {
     		c: function create() {
     			tr = element("tr");
-    			td = element("td");
-    			a = element("a");
+    			td0 = element("td");
+    			a0 = element("a");
     			t0 = text(t0_value);
     			t1 = space();
-    			attr_dev(a, "href", a_href_value = "/#/PerfilEquipo/" + /*row*/ ctx[8].id_equipo);
-    			add_location(a, file$e, 88, 32, 3137);
-    			attr_dev(td, "class", "blue-text");
-    			add_location(td, file$e, 88, 10, 3115);
-    			add_location(tr, file$e, 87, 10, 3100);
+    			td1 = element("td");
+    			a1 = element("a");
+    			i = element("i");
+    			i.textContent = "delete";
+    			t3 = space();
+    			attr_dev(a0, "href", a0_href_value = "/#/PerfilEquipo/" + /*row*/ ctx[13].id_equipo);
+    			add_location(a0, file$e, 132, 32, 4655);
+    			attr_dev(td0, "class", "blue-text");
+    			add_location(td0, file$e, 132, 10, 4633);
+    			attr_dev(i, "class", "material-icons left blue-text ");
+    			add_location(i, file$e, 133, 107, 4833);
+    			attr_dev(a1, "href", a1_href_value = "/#/PerfilTorneo/" + /*idTorneo*/ ctx[2]);
+    			add_location(a1, file$e, 133, 14, 4740);
+    			add_location(td1, file$e, 133, 10, 4736);
+    			add_location(tr, file$e, 131, 10, 4618);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, tr, anchor);
-    			append_dev(tr, td);
-    			append_dev(td, a);
-    			append_dev(a, t0);
+    			append_dev(tr, td0);
+    			append_dev(td0, a0);
+    			append_dev(a0, t0);
     			append_dev(tr, t1);
-    		},
-    		p: function update(ctx, dirty) {
-    			if (dirty & /*dataEquipos*/ 1 && t0_value !== (t0_value = /*row*/ ctx[8].nombre_equipo + "")) set_data_dev(t0, t0_value);
+    			append_dev(tr, td1);
+    			append_dev(td1, a1);
+    			append_dev(a1, i);
+    			append_dev(tr, t3);
 
-    			if (dirty & /*dataEquipos*/ 1 && a_href_value !== (a_href_value = "/#/PerfilEquipo/" + /*row*/ ctx[8].id_equipo)) {
-    				attr_dev(a, "href", a_href_value);
+    			if (!mounted) {
+    				dispose = listen_dev(a1, "click", click_handler, false, false, false);
+    				mounted = true;
+    			}
+    		},
+    		p: function update(new_ctx, dirty) {
+    			ctx = new_ctx;
+    			if (dirty & /*dataEquipos*/ 1 && t0_value !== (t0_value = /*row*/ ctx[13].nombre_equipo + "")) set_data_dev(t0, t0_value);
+
+    			if (dirty & /*dataEquipos*/ 1 && a0_href_value !== (a0_href_value = "/#/PerfilEquipo/" + /*row*/ ctx[13].id_equipo)) {
+    				attr_dev(a0, "href", a0_href_value);
     			}
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(tr);
+    			mounted = false;
+    			dispose();
     		}
     	};
 
@@ -6730,37 +6726,47 @@ var app = (function () {
     		block,
     		id: create_each_block_1$1.name,
     		type: "each",
-    		source: "(87:8) {#each dataEquipos as row}",
+    		source: "(131:8) {#each dataEquipos as row}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (110:8) {#each dataTodo as row}
+    // (153:10) {#each dataTodo as row}
     function create_each_block$9(ctx) {
     	let tr;
     	let td0;
-    	let t0_value = /*row*/ ctx[8].resultado_partida + "";
+    	let t0_value = /*row*/ ctx[13].resultado_partida + "";
     	let t0;
     	let t1;
     	let td1;
     	let a0;
-    	let t2_value = /*row*/ ctx[8].equipo1 + "";
+    	let t2_value = /*row*/ ctx[13].equipo1 + "";
     	let t2;
     	let a0_href_value;
     	let t3;
     	let td2;
     	let a1;
-    	let t4_value = /*row*/ ctx[8].equipo2 + "";
+    	let t4_value = /*row*/ ctx[13].equipo2 + "";
     	let t4;
     	let a1_href_value;
     	let t5;
     	let td3;
     	let a2;
-    	let i;
+    	let i0;
     	let a2_href_value;
     	let t7;
+    	let a3;
+    	let i1;
+    	let a3_href_value;
+    	let t9;
+    	let mounted;
+    	let dispose;
+
+    	function click_handler_1(...args) {
+    		return /*click_handler_1*/ ctx[7](/*row*/ ctx[13], ...args);
+    	}
 
     	const block = {
     		c: function create() {
@@ -6778,25 +6784,33 @@ var app = (function () {
     			t5 = space();
     			td3 = element("td");
     			a2 = element("a");
-    			i = element("i");
-    			i.textContent = "edit";
+    			i0 = element("i");
+    			i0.textContent = "edit";
     			t7 = space();
+    			a3 = element("a");
+    			i1 = element("i");
+    			i1.textContent = "delete";
+    			t9 = space();
     			attr_dev(td0, "class", "blue-text");
-    			add_location(td0, file$e, 111, 10, 3879);
-    			attr_dev(a0, "href", a0_href_value = "/#/PerfilEquipo/" + /*row*/ ctx[8].id_equipo);
-    			add_location(a0, file$e, 112, 32, 3962);
+    			add_location(td0, file$e, 154, 12, 5563);
+    			attr_dev(a0, "href", a0_href_value = "/#/PerfilEquipo/" + /*row*/ ctx[13].id_equipo1);
+    			add_location(a0, file$e, 155, 34, 5648);
     			attr_dev(td1, "class", "blue-text");
-    			add_location(td1, file$e, 112, 10, 3940);
-    			attr_dev(a1, "href", a1_href_value = "/#/PerfilEquipo/" + /*row*/ ctx[8].id_equipo);
-    			add_location(a1, file$e, 113, 32, 4060);
+    			add_location(td1, file$e, 155, 12, 5626);
+    			attr_dev(a1, "href", a1_href_value = "/#/PerfilEquipo/" + /*row*/ ctx[13].id_equipo2);
+    			add_location(a1, file$e, 156, 34, 5749);
     			attr_dev(td2, "class", "blue-text");
-    			add_location(td2, file$e, 113, 10, 4038);
-    			attr_dev(i, "class", "material-icons left blue-text");
-    			add_location(i, file$e, 114, 58, 4183);
-    			attr_dev(a2, "href", a2_href_value = "/#/EditarJugador/" + /*row*/ ctx[8].id_jugador);
-    			add_location(a2, file$e, 114, 14, 4139);
-    			add_location(td3, file$e, 114, 10, 4135);
-    			add_location(tr, file$e, 110, 10, 3864);
+    			add_location(td2, file$e, 156, 12, 5727);
+    			attr_dev(i0, "class", "material-icons left blue-text");
+    			add_location(i0, file$e, 158, 58, 5890);
+    			attr_dev(a2, "href", a2_href_value = "/#/EditarPartida/" + /*row*/ ctx[13].id_partida);
+    			add_location(a2, file$e, 158, 14, 5846);
+    			attr_dev(i1, "class", "material-icons left blue-text ");
+    			add_location(i1, file$e, 159, 139, 6083);
+    			attr_dev(a3, "href", a3_href_value = "/#/PerfilTorneo/" + /*idTorneo*/ ctx[2]);
+    			add_location(a3, file$e, 159, 14, 5958);
+    			add_location(td3, file$e, 157, 12, 5827);
+    			add_location(tr, file$e, 153, 12, 5546);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, tr, anchor);
@@ -6813,29 +6827,40 @@ var app = (function () {
     			append_dev(tr, t5);
     			append_dev(tr, td3);
     			append_dev(td3, a2);
-    			append_dev(a2, i);
-    			append_dev(tr, t7);
-    		},
-    		p: function update(ctx, dirty) {
-    			if (dirty & /*dataTodo*/ 2 && t0_value !== (t0_value = /*row*/ ctx[8].resultado_partida + "")) set_data_dev(t0, t0_value);
-    			if (dirty & /*dataTodo*/ 2 && t2_value !== (t2_value = /*row*/ ctx[8].equipo1 + "")) set_data_dev(t2, t2_value);
+    			append_dev(a2, i0);
+    			append_dev(td3, t7);
+    			append_dev(td3, a3);
+    			append_dev(a3, i1);
+    			append_dev(tr, t9);
 
-    			if (dirty & /*dataTodo*/ 2 && a0_href_value !== (a0_href_value = "/#/PerfilEquipo/" + /*row*/ ctx[8].id_equipo)) {
+    			if (!mounted) {
+    				dispose = listen_dev(a3, "click", click_handler_1, false, false, false);
+    				mounted = true;
+    			}
+    		},
+    		p: function update(new_ctx, dirty) {
+    			ctx = new_ctx;
+    			if (dirty & /*dataTodo*/ 2 && t0_value !== (t0_value = /*row*/ ctx[13].resultado_partida + "")) set_data_dev(t0, t0_value);
+    			if (dirty & /*dataTodo*/ 2 && t2_value !== (t2_value = /*row*/ ctx[13].equipo1 + "")) set_data_dev(t2, t2_value);
+
+    			if (dirty & /*dataTodo*/ 2 && a0_href_value !== (a0_href_value = "/#/PerfilEquipo/" + /*row*/ ctx[13].id_equipo1)) {
     				attr_dev(a0, "href", a0_href_value);
     			}
 
-    			if (dirty & /*dataTodo*/ 2 && t4_value !== (t4_value = /*row*/ ctx[8].equipo2 + "")) set_data_dev(t4, t4_value);
+    			if (dirty & /*dataTodo*/ 2 && t4_value !== (t4_value = /*row*/ ctx[13].equipo2 + "")) set_data_dev(t4, t4_value);
 
-    			if (dirty & /*dataTodo*/ 2 && a1_href_value !== (a1_href_value = "/#/PerfilEquipo/" + /*row*/ ctx[8].id_equipo)) {
+    			if (dirty & /*dataTodo*/ 2 && a1_href_value !== (a1_href_value = "/#/PerfilEquipo/" + /*row*/ ctx[13].id_equipo2)) {
     				attr_dev(a1, "href", a1_href_value);
     			}
 
-    			if (dirty & /*dataTodo*/ 2 && a2_href_value !== (a2_href_value = "/#/EditarJugador/" + /*row*/ ctx[8].id_jugador)) {
+    			if (dirty & /*dataTodo*/ 2 && a2_href_value !== (a2_href_value = "/#/EditarPartida/" + /*row*/ ctx[13].id_partida)) {
     				attr_dev(a2, "href", a2_href_value);
     			}
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(tr);
+    			mounted = false;
+    			dispose();
     		}
     	};
 
@@ -6843,7 +6868,7 @@ var app = (function () {
     		block,
     		id: create_each_block$9.name,
     		type: "each",
-    		source: "(110:8) {#each dataTodo as row}",
+    		source: "(153:10) {#each dataTodo as row}",
     		ctx
     	});
 
@@ -6852,33 +6877,38 @@ var app = (function () {
 
     function create_fragment$f(ctx) {
     	let body;
-    	let div0;
+    	let div;
     	let table0;
     	let thead0;
     	let tr0;
     	let th0;
     	let t1;
-    	let tbody0;
+    	let th1;
     	let t2;
+    	let tbody0;
+    	let t3;
     	let a0;
     	let i0;
-    	let t4;
-    	let div1;
+    	let a0_href_value;
+    	let t5;
+    	let h1;
+    	let t6;
     	let table1;
     	let thead1;
     	let tr1;
-    	let th1;
-    	let t6;
     	let th2;
     	let t8;
     	let th3;
     	let t10;
     	let th4;
-    	let t11;
-    	let tbody1;
     	let t12;
+    	let th5;
+    	let t13;
+    	let tbody1;
+    	let t14;
     	let a1;
     	let i1;
+    	let a1_href_value;
     	let each_value_1 = /*dataEquipos*/ ctx[0];
     	validate_each_argument(each_value_1);
     	let each_blocks_1 = [];
@@ -6898,132 +6928,137 @@ var app = (function () {
     	const block = {
     		c: function create() {
     			body = element("body");
-    			div0 = element("div");
+    			div = element("div");
     			table0 = element("table");
     			thead0 = element("thead");
     			tr0 = element("tr");
     			th0 = element("th");
     			th0.textContent = "Equipo";
     			t1 = space();
+    			th1 = element("th");
+    			t2 = space();
     			tbody0 = element("tbody");
 
     			for (let i = 0; i < each_blocks_1.length; i += 1) {
     				each_blocks_1[i].c();
     			}
 
-    			t2 = space();
+    			t3 = space();
     			a0 = element("a");
     			i0 = element("i");
     			i0.textContent = "add";
-    			t4 = space();
-    			div1 = element("div");
+    			t5 = space();
+    			h1 = element("h1");
+    			t6 = space();
     			table1 = element("table");
     			thead1 = element("thead");
     			tr1 = element("tr");
-    			th1 = element("th");
-    			th1.textContent = "Resultado";
-    			t6 = space();
     			th2 = element("th");
-    			th2.textContent = "Equipo 1";
+    			th2.textContent = "Resultado";
     			t8 = space();
     			th3 = element("th");
-    			th3.textContent = "Equipo 2";
+    			th3.textContent = "Equipo 1";
     			t10 = space();
     			th4 = element("th");
-    			t11 = space();
+    			th4.textContent = "Equipo 2";
+    			t12 = space();
+    			th5 = element("th");
+    			t13 = space();
     			tbody1 = element("tbody");
 
     			for (let i = 0; i < each_blocks.length; i += 1) {
     				each_blocks[i].c();
     			}
 
-    			t12 = space();
+    			t14 = space();
     			a1 = element("a");
     			i1 = element("i");
     			i1.textContent = "add";
-    			add_location(th0, file$e, 81, 10, 2902);
-    			add_location(tr0, file$e, 80, 8, 2887);
+    			add_location(th0, file$e, 123, 10, 4390);
+    			add_location(th1, file$e, 124, 10, 4417);
+    			add_location(tr0, file$e, 122, 8, 4375);
     			attr_dev(thead0, "class", "blue darken-1 white-text");
-    			add_location(thead0, file$e, 79, 6, 2838);
+    			add_location(thead0, file$e, 121, 6, 4326);
     			set_style(tbody0, "background", "rgba(0,0,0,0.5)");
-    			add_location(tbody0, file$e, 85, 6, 3008);
+    			add_location(tbody0, file$e, 129, 6, 4526);
     			attr_dev(table0, "class", "highlight centered ");
-    			add_location(table0, file$e, 78, 4, 2796);
+    			add_location(table0, file$e, 120, 4, 4284);
     			attr_dev(i0, "class", "material-icons left");
-    			add_location(i0, file$e, 93, 95, 3363);
-    			attr_dev(a0, "href", "/#/NuevoJugador");
+    			add_location(i0, file$e, 139, 113, 5075);
+    			attr_dev(a0, "href", a0_href_value = "/#/NuevoEquipoTorneo/" + /*idTorneo*/ ctx[2]);
     			attr_dev(a0, "class", "btn-floating btn-large waves-effect waves- blue darken-1");
-    			add_location(a0, file$e, 93, 4, 3272);
-    			attr_dev(div0, "class", "container");
-    			set_style(div0, "padding-top", "7%");
-    			add_location(div0, file$e, 77, 2, 2743);
-    			add_location(th1, file$e, 101, 10, 3588);
-    			add_location(th2, file$e, 102, 10, 3618);
-    			add_location(th3, file$e, 103, 10, 3647);
-    			add_location(th4, file$e, 104, 10, 3676);
-    			add_location(tr1, file$e, 99, 8, 3562);
+    			add_location(a0, file$e, 139, 6, 4968);
+    			add_location(h1, file$e, 140, 6, 5124);
+    			add_location(th2, file$e, 144, 12, 5252);
+    			add_location(th3, file$e, 145, 12, 5284);
+    			add_location(th4, file$e, 146, 12, 5315);
+    			add_location(th5, file$e, 147, 12, 5346);
+    			add_location(tr1, file$e, 143, 10, 5235);
     			attr_dev(thead1, "class", "blue darken-1 white-text");
-    			add_location(thead1, file$e, 98, 6, 3513);
+    			add_location(thead1, file$e, 142, 8, 5184);
     			set_style(tbody1, "background", "rgba(0,0,0,0.5)");
-    			add_location(tbody1, file$e, 108, 6, 3775);
+    			add_location(tbody1, file$e, 151, 8, 5453);
     			attr_dev(table1, "class", "highlight centered ");
-    			add_location(table1, file$e, 97, 4, 3471);
+    			add_location(table1, file$e, 141, 6, 5140);
     			attr_dev(i1, "class", "material-icons left");
-    			add_location(i1, file$e, 119, 95, 4397);
-    			attr_dev(a1, "href", "/#/NuevoJugador");
+    			add_location(i1, file$e, 165, 120, 6346);
+    			attr_dev(a1, "href", a1_href_value = "/#/NuevoEquipoTorneoPartida/" + /*idTorneo*/ ctx[2]);
     			attr_dev(a1, "class", "btn-floating btn-large waves-effect waves- blue darken-1");
-    			add_location(a1, file$e, 119, 4, 4306);
-    			attr_dev(div1, "class", "container");
-    			set_style(div1, "padding-top", "7%");
-    			add_location(div1, file$e, 96, 2, 3418);
+    			add_location(a1, file$e, 165, 6, 6232);
+    			attr_dev(div, "class", "container");
+    			set_style(div, "padding-top", "7%");
+    			add_location(div, file$e, 119, 2, 4231);
     			set_style(body, "background-image", "url(https://lolstatic-a.akamaihd.net/rso-login-page/2.9.34/assets/riot_desktop_background_2x.jpg)");
-    			add_location(body, file$e, 75, 0, 2609);
+    			add_location(body, file$e, 117, 0, 4097);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, body, anchor);
-    			append_dev(body, div0);
-    			append_dev(div0, table0);
+    			append_dev(body, div);
+    			append_dev(div, table0);
     			append_dev(table0, thead0);
     			append_dev(thead0, tr0);
     			append_dev(tr0, th0);
-    			append_dev(table0, t1);
+    			append_dev(tr0, t1);
+    			append_dev(tr0, th1);
+    			append_dev(table0, t2);
     			append_dev(table0, tbody0);
 
     			for (let i = 0; i < each_blocks_1.length; i += 1) {
     				each_blocks_1[i].m(tbody0, null);
     			}
 
-    			append_dev(div0, t2);
-    			append_dev(div0, a0);
+    			append_dev(div, t3);
+    			append_dev(div, a0);
     			append_dev(a0, i0);
-    			append_dev(body, t4);
-    			append_dev(body, div1);
-    			append_dev(div1, table1);
+    			append_dev(div, t5);
+    			append_dev(div, h1);
+    			append_dev(div, t6);
+    			append_dev(div, table1);
     			append_dev(table1, thead1);
     			append_dev(thead1, tr1);
-    			append_dev(tr1, th1);
-    			append_dev(tr1, t6);
     			append_dev(tr1, th2);
     			append_dev(tr1, t8);
     			append_dev(tr1, th3);
     			append_dev(tr1, t10);
     			append_dev(tr1, th4);
-    			append_dev(table1, t11);
+    			append_dev(tr1, t12);
+    			append_dev(tr1, th5);
+    			append_dev(table1, t13);
     			append_dev(table1, tbody1);
 
     			for (let i = 0; i < each_blocks.length; i += 1) {
     				each_blocks[i].m(tbody1, null);
     			}
 
-    			append_dev(div1, t12);
-    			append_dev(div1, a1);
+    			append_dev(div, t14);
+    			append_dev(div, a1);
     			append_dev(a1, i1);
     		},
     		p: function update(ctx, [dirty]) {
-    			if (dirty & /*dataEquipos*/ 1) {
+    			if (dirty & /*idTorneo, desinscribirEquipoTorneo, dataEquipos*/ 13) {
     				each_value_1 = /*dataEquipos*/ ctx[0];
     				validate_each_argument(each_value_1);
     				let i;
@@ -7047,7 +7082,7 @@ var app = (function () {
     				each_blocks_1.length = each_value_1.length;
     			}
 
-    			if (dirty & /*dataTodo*/ 2) {
+    			if (dirty & /*idTorneo, BorrarPartidaEquipoTorneo, dataTodo*/ 22) {
     				each_value = /*dataTodo*/ ctx[1];
     				validate_each_argument(each_value);
     				let i;
@@ -7095,6 +7130,9 @@ var app = (function () {
     const apiURL2$6 = "http://127.0.0.1:5000/get_equipo/";
     const apiUrl3 = "http://127.0.0.1:5000/get_equis_torneo_partidas/"; // obtener valores filtrado de equis_torne_partida
     const apiURL4$1 = "http://127.0.0.1:5000/get_partida/"; // obtener partida
+    const apiURL5 = "http://127.0.0.1:5000/delete_equi_torneo/";
+    const apiURL6 = "http://127.0.0.1:5000/delete_partida/";
+    const apiURL7 = "http://127.0.0.1:5000/delete_equi_torneo_partida/";
 
     function GetSortOrder(prop) {
     	return function (a, b) {
@@ -7106,6 +7144,13 @@ var app = (function () {
 
     		return 0;
     	};
+    }
+
+    async function eliminarPartida(p_idPartida) {
+    	const response = await fetch(apiURL6 + p_idPartida, { method: "DELETE" });
+    	const json = await response.json();
+    	let result = JSON.stringify(json);
+    	console.log(result);
     }
 
     function instance$f($$self, $$props, $$invalidate) {
@@ -7155,6 +7200,9 @@ var app = (function () {
     			const response4 = await fetch(apiURL4$1 + dataEquiposTorneoPartida[i].id_partida);
 
     			let json4 = await response4.json();
+    			dataTodoAux.id_partida = json4.id_partida;
+    			dataTodoAux.id_equipo1 = json2.id_equipo;
+    			dataTodoAux.id_equipo2 = json3.id_equipo;
     			dataTodoAux.resultado_partida = json4.resultado_partida;
     			dataTodoAux.equipo1 = json2.nombre_equipo;
     			dataTodoAux.equipo2 = json3.nombre_equipo;
@@ -7164,6 +7212,28 @@ var app = (function () {
     		$$invalidate(1, dataTodo = dataEquiposPartidaAux);
     	});
 
+    	async function desinscribirEquipoTorneo(p_idEquipo) {
+    		const response = await fetch(apiURL5 + p_idEquipo + "/" + idTorneo, { method: "DELETE" });
+    		const json = await response.json();
+    		let result = JSON.stringify(json);
+
+    		//location.reload();
+    		console.log(result);
+    	}
+
+    	async function BorrarPartidaEquipoTorneo(p_idPartida, p_equipo1, p_equipo2) {
+    		eliminarPartida(p_idPartida);
+    		eliminarEquiTornePartida(p_idPartida, p_equipo1);
+    		eliminarEquiTornePartida(p_idPartida, p_equipo2);
+    	}
+
+    	async function eliminarEquiTornePartida(p_idPartida, p_idEquipo) {
+    		const response = await fetch(apiURL7 + p_idEquipo + "/" + idTorneo + "/" + p_idPartida, { method: "DELETE" });
+    		const json = await response.json();
+    		let result = JSON.stringify(json);
+    		console.log(result);
+    	}
+
     	const writable_props = ["params"];
 
     	Object.keys($$props).forEach(key => {
@@ -7172,9 +7242,11 @@ var app = (function () {
 
     	let { $$slots = {}, $$scope } = $$props;
     	validate_slots("PerfilTorneo", $$slots, []);
+    	const click_handler = row => desinscribirEquipoTorneo(row.id_equipo);
+    	const click_handler_1 = row => BorrarPartidaEquipoTorneo(row.id_partida, row.id_equipo1, row.id_equipo2);
 
     	$$self.$$set = $$props => {
-    		if ("params" in $$props) $$invalidate(2, params = $$props.params);
+    		if ("params" in $$props) $$invalidate(5, params = $$props.params);
     	};
 
     	$$self.$capture_state = () => ({
@@ -7186,18 +7258,25 @@ var app = (function () {
     		apiURL2: apiURL2$6,
     		apiUrl3,
     		apiURL4: apiURL4$1,
+    		apiURL5,
+    		apiURL6,
+    		apiURL7,
     		dataEquipos,
     		dataEquiposTorneo,
     		dataEquiposAux,
     		dataEquiposTorneoPartida,
     		dataEquiposPartidaAux,
     		dataTodo,
-    		GetSortOrder
+    		GetSortOrder,
+    		desinscribirEquipoTorneo,
+    		BorrarPartidaEquipoTorneo,
+    		eliminarPartida,
+    		eliminarEquiTornePartida
     	});
 
     	$$self.$inject_state = $$props => {
-    		if ("params" in $$props) $$invalidate(2, params = $$props.params);
-    		if ("idTorneo" in $$props) idTorneo = $$props.idTorneo;
+    		if ("params" in $$props) $$invalidate(5, params = $$props.params);
+    		if ("idTorneo" in $$props) $$invalidate(2, idTorneo = $$props.idTorneo);
     		if ("dataEquipos" in $$props) $$invalidate(0, dataEquipos = $$props.dataEquipos);
     		if ("dataEquiposTorneo" in $$props) dataEquiposTorneo = $$props.dataEquiposTorneo;
     		if ("dataEquiposAux" in $$props) dataEquiposAux = $$props.dataEquiposAux;
@@ -7210,13 +7289,22 @@ var app = (function () {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [dataEquipos, dataTodo, params];
+    	return [
+    		dataEquipos,
+    		dataTodo,
+    		idTorneo,
+    		desinscribirEquipoTorneo,
+    		BorrarPartidaEquipoTorneo,
+    		params,
+    		click_handler,
+    		click_handler_1
+    	];
     }
 
     class PerfilTorneo extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$f, create_fragment$f, safe_not_equal, { params: 2 });
+    		init(this, options, instance$f, create_fragment$f, safe_not_equal, { params: 5 });
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
@@ -7228,7 +7316,7 @@ var app = (function () {
     		const { ctx } = this.$$;
     		const props = options.props || {};
 
-    		if (/*params*/ ctx[2] === undefined && !("params" in props)) {
+    		if (/*params*/ ctx[5] === undefined && !("params" in props)) {
     			console_1$e.warn("<PerfilTorneo> was created without expected prop 'params'");
     		}
     	}
@@ -7242,10 +7330,970 @@ var app = (function () {
     	}
     }
 
-    /* src\App.svelte generated by Svelte v3.24.1 */
-    const file$f = "src\\App.svelte";
+    /* src\NuevoEquipoTorneo.svelte generated by Svelte v3.24.1 */
+
+    const { console: console_1$f } = globals;
+    const file$f = "src\\NuevoEquipoTorneo.svelte";
+
+    function get_each_context$a(ctx, list, i) {
+    	const child_ctx = ctx.slice();
+    	child_ctx[8] = list[i];
+    	return child_ctx;
+    }
+
+    // (55:18) {#each dataEquipos as equipo }
+    function create_each_block$a(ctx) {
+    	let option;
+    	let t_value = /*equipo*/ ctx[8].nombre_equipo + "";
+    	let t;
+    	let option_value_value;
+
+    	const block = {
+    		c: function create() {
+    			option = element("option");
+    			t = text(t_value);
+    			option.__value = option_value_value = /*equipo*/ ctx[8].id_equipo;
+    			option.value = option.__value;
+    			add_location(option, file$f, 55, 18, 1811);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, option, anchor);
+    			append_dev(option, t);
+    		},
+    		p: function update(ctx, dirty) {
+    			if (dirty & /*dataEquipos*/ 1 && t_value !== (t_value = /*equipo*/ ctx[8].nombre_equipo + "")) set_data_dev(t, t_value);
+
+    			if (dirty & /*dataEquipos*/ 1 && option_value_value !== (option_value_value = /*equipo*/ ctx[8].id_equipo)) {
+    				prop_dev(option, "__value", option_value_value);
+    				option.value = option.__value;
+    			}
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(option);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_each_block$a.name,
+    		type: "each",
+    		source: "(55:18) {#each dataEquipos as equipo }",
+    		ctx
+    	});
+
+    	return block;
+    }
 
     function create_fragment$g(ctx) {
+    	let body;
+    	let div7;
+    	let div6;
+    	let div5;
+    	let div0;
+    	let span;
+    	let t1;
+    	let div4;
+    	let div2;
+    	let div1;
+    	let select;
+    	let option;
+    	let t3;
+    	let label;
+    	let t5;
+    	let div3;
+    	let a;
+    	let i;
+    	let t7;
+    	let mounted;
+    	let dispose;
+    	let each_value = /*dataEquipos*/ ctx[0];
+    	validate_each_argument(each_value);
+    	let each_blocks = [];
+
+    	for (let i = 0; i < each_value.length; i += 1) {
+    		each_blocks[i] = create_each_block$a(get_each_context$a(ctx, each_value, i));
+    	}
+
+    	const block = {
+    		c: function create() {
+    			body = element("body");
+    			div7 = element("div");
+    			div6 = element("div");
+    			div5 = element("div");
+    			div0 = element("div");
+    			span = element("span");
+    			span.textContent = "Inscribir Equipo a Torneo";
+    			t1 = space();
+    			div4 = element("div");
+    			div2 = element("div");
+    			div1 = element("div");
+    			select = element("select");
+    			option = element("option");
+    			option.textContent = "Equipos";
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].c();
+    			}
+
+    			t3 = space();
+    			label = element("label");
+    			label.textContent = "Nombre Equipo";
+    			t5 = space();
+    			div3 = element("div");
+    			a = element("a");
+    			i = element("i");
+    			i.textContent = "check_circle";
+    			t7 = text("Agregar");
+    			attr_dev(span, "class", "card-title center ");
+    			set_style(span, "color", "#263238 ");
+    			set_style(span, "font-size", "2em");
+    			set_style(span, "font-weight", "bolder");
+    			add_location(span, file$f, 46, 10, 1318);
+    			attr_dev(div0, "class", "card-content black-text thick ");
+    			add_location(div0, file$f, 45, 8, 1261);
+    			option.__value = "";
+    			option.value = option.__value;
+    			option.disabled = true;
+    			option.selected = true;
+    			add_location(option, file$f, 53, 18, 1690);
+    			attr_dev(select, "class", "browser-default");
+    			if (/*selected*/ ctx[1] === void 0) add_render_callback(() => /*select_change_handler*/ ctx[4].call(select));
+    			add_location(select, file$f, 52, 16, 1615);
+    			attr_dev(label, "class", "active");
+    			attr_dev(label, "for", "first_name ");
+    			add_location(label, file$f, 58, 16, 1947);
+    			attr_dev(div1, "class", "row input-field col s6 offset");
+    			add_location(div1, file$f, 51, 12, 1547);
+    			attr_dev(div2, "class", "container");
+    			add_location(div2, file$f, 50, 10, 1510);
+    			attr_dev(i, "class", "material-icons left white-text ");
+    			add_location(i, file$f, 62, 132, 2220);
+    			set_style(a, "color", "white");
+    			attr_dev(a, "class", "waves-effect waves-light btn deep- blue darken-1");
+    			add_location(a, file$f, 62, 12, 2100);
+    			attr_dev(div3, "class", "container");
+    			add_location(div3, file$f, 61, 10, 2061);
+    			attr_dev(div4, "class", "card-action");
+    			add_location(div4, file$f, 49, 8, 1473);
+    			attr_dev(div5, "class", "col s12 m4 l8 card blue-grey lighten-5");
+    			add_location(div5, file$f, 44, 6, 1199);
+    			attr_dev(div6, "class", "container");
+    			add_location(div6, file$f, 43, 4, 1166);
+    			attr_dev(div7, "class", "container ");
+    			set_style(div7, "padding-top", "10%");
+    			add_location(div7, file$f, 42, 2, 1110);
+    			set_style(body, "background-image", "url(https://lolstatic-a.akamaihd.net/rso-login-page/2.9.34/assets/riot_desktop_background_2x.jpg)");
+    			add_location(body, file$f, 41, 0, 975);
+    		},
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, body, anchor);
+    			append_dev(body, div7);
+    			append_dev(div7, div6);
+    			append_dev(div6, div5);
+    			append_dev(div5, div0);
+    			append_dev(div0, span);
+    			append_dev(div5, t1);
+    			append_dev(div5, div4);
+    			append_dev(div4, div2);
+    			append_dev(div2, div1);
+    			append_dev(div1, select);
+    			append_dev(select, option);
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].m(select, null);
+    			}
+
+    			select_option(select, /*selected*/ ctx[1]);
+    			append_dev(div1, t3);
+    			append_dev(div1, label);
+    			append_dev(div4, t5);
+    			append_dev(div4, div3);
+    			append_dev(div3, a);
+    			append_dev(a, i);
+    			append_dev(a, t7);
+
+    			if (!mounted) {
+    				dispose = [
+    					listen_dev(select, "change", /*select_change_handler*/ ctx[4]),
+    					listen_dev(a, "click", /*click_handler*/ ctx[5], false, false, false)
+    				];
+
+    				mounted = true;
+    			}
+    		},
+    		p: function update(ctx, [dirty]) {
+    			if (dirty & /*dataEquipos*/ 1) {
+    				each_value = /*dataEquipos*/ ctx[0];
+    				validate_each_argument(each_value);
+    				let i;
+
+    				for (i = 0; i < each_value.length; i += 1) {
+    					const child_ctx = get_each_context$a(ctx, each_value, i);
+
+    					if (each_blocks[i]) {
+    						each_blocks[i].p(child_ctx, dirty);
+    					} else {
+    						each_blocks[i] = create_each_block$a(child_ctx);
+    						each_blocks[i].c();
+    						each_blocks[i].m(select, null);
+    					}
+    				}
+
+    				for (; i < each_blocks.length; i += 1) {
+    					each_blocks[i].d(1);
+    				}
+
+    				each_blocks.length = each_value.length;
+    			}
+
+    			if (dirty & /*selected, dataEquipos*/ 3) {
+    				select_option(select, /*selected*/ ctx[1]);
+    			}
+    		},
+    		i: noop,
+    		o: noop,
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(body);
+    			destroy_each(each_blocks, detaching);
+    			mounted = false;
+    			run_all(dispose);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_fragment$g.name,
+    		type: "component",
+    		source: "",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    const apiURL1 = "http://127.0.0.1:5000/get_equipos";
+    const apiURL2$7 = "http://127.0.0.1:5000/add_equi_torneo";
+
+    function instance$g($$self, $$props, $$invalidate) {
+    	let { params } = $$props;
+    	let idTorneo = params.ID_Torneo;
+    	let dataEquipos = [];
+    	let selected;
+    	let nombreJugadorNuevo = "";
+
+    	onMount(async function () {
+    		const response = await fetch(apiURL1);
+    		$$invalidate(0, dataEquipos = await response.json());
+    		console.log(dataEquipos);
+    	});
+
+    	async function inscribirEquipoTorneo() {
+    		const response = await fetch(apiURL2$7, {
+    			method: "POST",
+    			headers: { "Content-Type": "application/json" },
+    			body: JSON.stringify({
+    				"id_equipo": selected,
+    				"id_torneo": idTorneo
+    			})
+    		});
+
+    		const json = await response.json();
+    		let result = JSON.stringify(json);
+    		location.href = "/#/PerfilTorneo/" + idTorneo;
+    		console.log(result);
+    	}
+
+    	const writable_props = ["params"];
+
+    	Object.keys($$props).forEach(key => {
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console_1$f.warn(`<NuevoEquipoTorneo> was created with unknown prop '${key}'`);
+    	});
+
+    	let { $$slots = {}, $$scope } = $$props;
+    	validate_slots("NuevoEquipoTorneo", $$slots, []);
+
+    	function select_change_handler() {
+    		selected = select_value(this);
+    		$$invalidate(1, selected);
+    		$$invalidate(0, dataEquipos);
+    	}
+
+    	const click_handler = () => inscribirEquipoTorneo();
+
+    	$$self.$$set = $$props => {
+    		if ("params" in $$props) $$invalidate(3, params = $$props.params);
+    	};
+
+    	$$self.$capture_state = () => ({
+    		onMount,
+    		apiURL1,
+    		apiURL2: apiURL2$7,
+    		params,
+    		idTorneo,
+    		dataEquipos,
+    		selected,
+    		nombreJugadorNuevo,
+    		inscribirEquipoTorneo
+    	});
+
+    	$$self.$inject_state = $$props => {
+    		if ("params" in $$props) $$invalidate(3, params = $$props.params);
+    		if ("idTorneo" in $$props) idTorneo = $$props.idTorneo;
+    		if ("dataEquipos" in $$props) $$invalidate(0, dataEquipos = $$props.dataEquipos);
+    		if ("selected" in $$props) $$invalidate(1, selected = $$props.selected);
+    		if ("nombreJugadorNuevo" in $$props) nombreJugadorNuevo = $$props.nombreJugadorNuevo;
+    	};
+
+    	if ($$props && "$$inject" in $$props) {
+    		$$self.$inject_state($$props.$$inject);
+    	}
+
+    	return [
+    		dataEquipos,
+    		selected,
+    		inscribirEquipoTorneo,
+    		params,
+    		select_change_handler,
+    		click_handler
+    	];
+    }
+
+    class NuevoEquipoTorneo extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance$g, create_fragment$g, safe_not_equal, { params: 3 });
+
+    		dispatch_dev("SvelteRegisterComponent", {
+    			component: this,
+    			tagName: "NuevoEquipoTorneo",
+    			options,
+    			id: create_fragment$g.name
+    		});
+
+    		const { ctx } = this.$$;
+    		const props = options.props || {};
+
+    		if (/*params*/ ctx[3] === undefined && !("params" in props)) {
+    			console_1$f.warn("<NuevoEquipoTorneo> was created without expected prop 'params'");
+    		}
+    	}
+
+    	get params() {
+    		throw new Error("<NuevoEquipoTorneo>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set params(value) {
+    		throw new Error("<NuevoEquipoTorneo>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+    }
+
+    /* src\NuevoEquipoTorneoPartida.svelte generated by Svelte v3.24.1 */
+
+    const { console: console_1$g } = globals;
+    const file$g = "src\\NuevoEquipoTorneoPartida.svelte";
+
+    function get_each_context$b(ctx, list, i) {
+    	const child_ctx = ctx.slice();
+    	child_ctx[14] = list[i];
+    	return child_ctx;
+    }
+
+    function get_each_context_1$2(ctx, list, i) {
+    	const child_ctx = ctx.slice();
+    	child_ctx[14] = list[i];
+    	return child_ctx;
+    }
+
+    // (106:18) {#each dataEquipos as equipo }
+    function create_each_block_1$2(ctx) {
+    	let option;
+    	let t_value = /*equipo*/ ctx[14].nombre_equipo + "";
+    	let t;
+    	let option_value_value;
+
+    	const block = {
+    		c: function create() {
+    			option = element("option");
+    			t = text(t_value);
+    			option.__value = option_value_value = /*equipo*/ ctx[14].id_equipo;
+    			option.value = option.__value;
+    			add_location(option, file$g, 106, 18, 3426);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, option, anchor);
+    			append_dev(option, t);
+    		},
+    		p: function update(ctx, dirty) {
+    			if (dirty & /*dataEquipos*/ 1 && t_value !== (t_value = /*equipo*/ ctx[14].nombre_equipo + "")) set_data_dev(t, t_value);
+
+    			if (dirty & /*dataEquipos*/ 1 && option_value_value !== (option_value_value = /*equipo*/ ctx[14].id_equipo)) {
+    				prop_dev(option, "__value", option_value_value);
+    				option.value = option.__value;
+    			}
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(option);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_each_block_1$2.name,
+    		type: "each",
+    		source: "(106:18) {#each dataEquipos as equipo }",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (116:18) {#each dataEquipos as equipo }
+    function create_each_block$b(ctx) {
+    	let option;
+    	let t_value = /*equipo*/ ctx[14].nombre_equipo + "";
+    	let t;
+    	let option_value_value;
+
+    	const block = {
+    		c: function create() {
+    			option = element("option");
+    			t = text(t_value);
+    			option.__value = option_value_value = /*equipo*/ ctx[14].id_equipo;
+    			option.value = option.__value;
+    			add_location(option, file$g, 116, 18, 3930);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, option, anchor);
+    			append_dev(option, t);
+    		},
+    		p: function update(ctx, dirty) {
+    			if (dirty & /*dataEquipos*/ 1 && t_value !== (t_value = /*equipo*/ ctx[14].nombre_equipo + "")) set_data_dev(t, t_value);
+
+    			if (dirty & /*dataEquipos*/ 1 && option_value_value !== (option_value_value = /*equipo*/ ctx[14].id_equipo)) {
+    				prop_dev(option, "__value", option_value_value);
+    				option.value = option.__value;
+    			}
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(option);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_each_block$b.name,
+    		type: "each",
+    		source: "(116:18) {#each dataEquipos as equipo }",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    function create_fragment$h(ctx) {
+    	let body;
+    	let div9;
+    	let div8;
+    	let div7;
+    	let div0;
+    	let span;
+    	let t1;
+    	let div6;
+    	let div4;
+    	let div1;
+    	let select0;
+    	let option0;
+    	let t3;
+    	let label0;
+    	let t5;
+    	let div2;
+    	let select1;
+    	let option1;
+    	let t7;
+    	let label1;
+    	let t9;
+    	let div3;
+    	let input;
+    	let t10;
+    	let label2;
+    	let t12;
+    	let a;
+    	let i;
+    	let t14;
+    	let t15;
+    	let div5;
+    	let mounted;
+    	let dispose;
+    	let each_value_1 = /*dataEquipos*/ ctx[0];
+    	validate_each_argument(each_value_1);
+    	let each_blocks_1 = [];
+
+    	for (let i = 0; i < each_value_1.length; i += 1) {
+    		each_blocks_1[i] = create_each_block_1$2(get_each_context_1$2(ctx, each_value_1, i));
+    	}
+
+    	let each_value = /*dataEquipos*/ ctx[0];
+    	validate_each_argument(each_value);
+    	let each_blocks = [];
+
+    	for (let i = 0; i < each_value.length; i += 1) {
+    		each_blocks[i] = create_each_block$b(get_each_context$b(ctx, each_value, i));
+    	}
+
+    	const block = {
+    		c: function create() {
+    			body = element("body");
+    			div9 = element("div");
+    			div8 = element("div");
+    			div7 = element("div");
+    			div0 = element("div");
+    			span = element("span");
+    			span.textContent = "Inserte una partida al torneo";
+    			t1 = space();
+    			div6 = element("div");
+    			div4 = element("div");
+    			div1 = element("div");
+    			select0 = element("select");
+    			option0 = element("option");
+    			option0.textContent = "Equipos";
+
+    			for (let i = 0; i < each_blocks_1.length; i += 1) {
+    				each_blocks_1[i].c();
+    			}
+
+    			t3 = space();
+    			label0 = element("label");
+    			label0.textContent = "Equipo 1";
+    			t5 = space();
+    			div2 = element("div");
+    			select1 = element("select");
+    			option1 = element("option");
+    			option1.textContent = "Equipos";
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].c();
+    			}
+
+    			t7 = space();
+    			label1 = element("label");
+    			label1.textContent = "Equipo 2";
+    			t9 = space();
+    			div3 = element("div");
+    			input = element("input");
+    			t10 = space();
+    			label2 = element("label");
+    			label2.textContent = "Resultado";
+    			t12 = space();
+    			a = element("a");
+    			i = element("i");
+    			i.textContent = "check_circle";
+    			t14 = text("Agregar");
+    			t15 = space();
+    			div5 = element("div");
+    			attr_dev(span, "class", "card-title center ");
+    			set_style(span, "color", "#263238 ");
+    			set_style(span, "font-size", "2em");
+    			set_style(span, "font-weight", "bolder");
+    			add_location(span, file$g, 96, 10, 2918);
+    			attr_dev(div0, "class", "card-content black-text thick ");
+    			add_location(div0, file$g, 95, 8, 2861);
+    			option0.__value = "";
+    			option0.value = option0.__value;
+    			option0.disabled = true;
+    			option0.selected = true;
+    			add_location(option0, file$g, 104, 18, 3305);
+    			attr_dev(select0, "class", "browser-default");
+    			if (/*selectedEquipo1*/ ctx[1] === void 0) add_render_callback(() => /*select0_change_handler*/ ctx[6].call(select0));
+    			add_location(select0, file$g, 103, 16, 3223);
+    			attr_dev(label0, "class", "active");
+    			attr_dev(label0, "for", "first_name ");
+    			add_location(label0, file$g, 109, 16, 3562);
+    			attr_dev(div1, "class", "row input-field col s6 offset");
+    			add_location(div1, file$g, 102, 14, 3155);
+    			option1.__value = "";
+    			option1.value = option1.__value;
+    			option1.disabled = true;
+    			option1.selected = true;
+    			add_location(option1, file$g, 114, 18, 3809);
+    			attr_dev(select1, "class", "browser-default");
+    			if (/*selectedEquipo2*/ ctx[2] === void 0) add_render_callback(() => /*select1_change_handler*/ ctx[7].call(select1));
+    			add_location(select1, file$g, 113, 16, 3727);
+    			attr_dev(label1, "class", "active");
+    			attr_dev(label1, "for", "first_name ");
+    			add_location(label1, file$g, 119, 16, 4066);
+    			attr_dev(div2, "class", "row input-field col s6 offset");
+    			add_location(div2, file$g, 112, 14, 3659);
+    			set_style(input, "border-radius", "15px");
+    			attr_dev(input, "placeholder", "Por Determinar");
+    			attr_dev(input, "id", "first_name");
+    			attr_dev(input, "type", "text");
+    			attr_dev(input, "class", "white validate black-text");
+    			add_location(input, file$g, 123, 16, 4227);
+    			attr_dev(label2, "class", "active ");
+    			attr_dev(label2, "for", "first_name ");
+    			add_location(label2, file$g, 124, 18, 4403);
+    			attr_dev(div3, "class", "row input-field col s6 offset ");
+    			add_location(div3, file$g, 122, 14, 4165);
+    			attr_dev(div4, "class", "container");
+    			add_location(div4, file$g, 100, 10, 3114);
+    			attr_dev(i, "class", "material-icons left white-text ");
+    			add_location(i, file$g, 127, 130, 4634);
+    			set_style(a, "color", "white");
+    			attr_dev(a, "class", "waves-effect waves-light btn deep- blue darken-1");
+    			add_location(a, file$g, 127, 10, 4514);
+    			attr_dev(div5, "class", "container");
+    			add_location(div5, file$g, 129, 10, 4718);
+    			attr_dev(div6, "class", "card-action");
+    			add_location(div6, file$g, 99, 8, 3077);
+    			attr_dev(div7, "class", "col s12 m4 l8 card blue-grey lighten-5");
+    			add_location(div7, file$g, 94, 6, 2799);
+    			attr_dev(div8, "class", "container");
+    			add_location(div8, file$g, 93, 4, 2766);
+    			attr_dev(div9, "class", "container ");
+    			set_style(div9, "padding-top", "10%");
+    			add_location(div9, file$g, 92, 2, 2710);
+    			set_style(body, "background-image", "url(https://lolstatic-a.akamaihd.net/rso-login-page/2.9.34/assets/riot_desktop_background_2x.jpg)");
+    			add_location(body, file$g, 91, 0, 2575);
+    		},
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, body, anchor);
+    			append_dev(body, div9);
+    			append_dev(div9, div8);
+    			append_dev(div8, div7);
+    			append_dev(div7, div0);
+    			append_dev(div0, span);
+    			append_dev(div7, t1);
+    			append_dev(div7, div6);
+    			append_dev(div6, div4);
+    			append_dev(div4, div1);
+    			append_dev(div1, select0);
+    			append_dev(select0, option0);
+
+    			for (let i = 0; i < each_blocks_1.length; i += 1) {
+    				each_blocks_1[i].m(select0, null);
+    			}
+
+    			select_option(select0, /*selectedEquipo1*/ ctx[1]);
+    			append_dev(div1, t3);
+    			append_dev(div1, label0);
+    			append_dev(div4, t5);
+    			append_dev(div4, div2);
+    			append_dev(div2, select1);
+    			append_dev(select1, option1);
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].m(select1, null);
+    			}
+
+    			select_option(select1, /*selectedEquipo2*/ ctx[2]);
+    			append_dev(div2, t7);
+    			append_dev(div2, label1);
+    			append_dev(div4, t9);
+    			append_dev(div4, div3);
+    			append_dev(div3, input);
+    			set_input_value(input, /*resultadoPartida*/ ctx[3]);
+    			append_dev(div3, t10);
+    			append_dev(div3, label2);
+    			append_dev(div6, t12);
+    			append_dev(div6, a);
+    			append_dev(a, i);
+    			append_dev(a, t14);
+    			append_dev(div6, t15);
+    			append_dev(div6, div5);
+
+    			if (!mounted) {
+    				dispose = [
+    					listen_dev(select0, "change", /*select0_change_handler*/ ctx[6]),
+    					listen_dev(select1, "change", /*select1_change_handler*/ ctx[7]),
+    					listen_dev(input, "input", /*input_input_handler*/ ctx[8]),
+    					listen_dev(a, "click", /*click_handler*/ ctx[9], false, false, false)
+    				];
+
+    				mounted = true;
+    			}
+    		},
+    		p: function update(ctx, [dirty]) {
+    			if (dirty & /*dataEquipos*/ 1) {
+    				each_value_1 = /*dataEquipos*/ ctx[0];
+    				validate_each_argument(each_value_1);
+    				let i;
+
+    				for (i = 0; i < each_value_1.length; i += 1) {
+    					const child_ctx = get_each_context_1$2(ctx, each_value_1, i);
+
+    					if (each_blocks_1[i]) {
+    						each_blocks_1[i].p(child_ctx, dirty);
+    					} else {
+    						each_blocks_1[i] = create_each_block_1$2(child_ctx);
+    						each_blocks_1[i].c();
+    						each_blocks_1[i].m(select0, null);
+    					}
+    				}
+
+    				for (; i < each_blocks_1.length; i += 1) {
+    					each_blocks_1[i].d(1);
+    				}
+
+    				each_blocks_1.length = each_value_1.length;
+    			}
+
+    			if (dirty & /*selectedEquipo1, dataEquipos*/ 3) {
+    				select_option(select0, /*selectedEquipo1*/ ctx[1]);
+    			}
+
+    			if (dirty & /*dataEquipos*/ 1) {
+    				each_value = /*dataEquipos*/ ctx[0];
+    				validate_each_argument(each_value);
+    				let i;
+
+    				for (i = 0; i < each_value.length; i += 1) {
+    					const child_ctx = get_each_context$b(ctx, each_value, i);
+
+    					if (each_blocks[i]) {
+    						each_blocks[i].p(child_ctx, dirty);
+    					} else {
+    						each_blocks[i] = create_each_block$b(child_ctx);
+    						each_blocks[i].c();
+    						each_blocks[i].m(select1, null);
+    					}
+    				}
+
+    				for (; i < each_blocks.length; i += 1) {
+    					each_blocks[i].d(1);
+    				}
+
+    				each_blocks.length = each_value.length;
+    			}
+
+    			if (dirty & /*selectedEquipo2, dataEquipos*/ 5) {
+    				select_option(select1, /*selectedEquipo2*/ ctx[2]);
+    			}
+
+    			if (dirty & /*resultadoPartida*/ 8 && input.value !== /*resultadoPartida*/ ctx[3]) {
+    				set_input_value(input, /*resultadoPartida*/ ctx[3]);
+    			}
+    		},
+    		i: noop,
+    		o: noop,
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(body);
+    			destroy_each(each_blocks_1, detaching);
+    			destroy_each(each_blocks, detaching);
+    			mounted = false;
+    			run_all(dispose);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_fragment$h.name,
+    		type: "component",
+    		source: "",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    const apiURL$e = "http://127.0.0.1:5000/get_equis_torneo/";
+    const apiURL1$1 = "http://127.0.0.1:5000/get_equipo/";
+    const apiURL2$8 = "http://127.0.0.1:5000/add_partida";
+    const apiURL3$4 = "http://127.0.0.1:5000/add_equi_torneo_partida";
+
+    function instance$h($$self, $$props, $$invalidate) {
+    	let { params } = $$props;
+    	let idTorneo = params.ID_Torneo;
+    	let dataEquiposTorneo = [];
+    	let dataEquiposAux = [];
+    	let dataEquipos = [];
+    	let selectedEquipo1;
+    	let selectedEquipo2;
+    	let resultadoPartida;
+
+    	onMount(async function () {
+    		const response = await fetch(apiURL$e + idTorneo);
+    		let json = await response.json();
+    		dataEquiposTorneo = json;
+    		console.log(dataEquiposTorneo);
+
+    		//console.log(dataEquiposTorneo.length);
+    		for (let i = 0; i < dataEquiposTorneo.length; i++) {
+    			const response2 = await fetch(apiURL1$1 + dataEquiposTorneo[i].id_equipo);
+    			let json2 = await response2.json();
+    			dataEquiposAux.push(json2);
+    		}
+
+    		$$invalidate(0, dataEquipos = dataEquiposAux); // svelte no reacciona push.....
+    		console.log(dataEquipos);
+    	});
+
+    	async function insertarPartidaTorneo() {
+    		if (selectedEquipo1 != selectedEquipo2) {
+    			const partida = JSON.parse(await crearPartida());
+
+    			const response = await fetch(apiURL3$4, {
+    				method: "POST",
+    				headers: { "Content-Type": "application/json" },
+    				body: JSON.stringify({
+    					"id_equipo": selectedEquipo1,
+    					"id_torneo": idTorneo,
+    					"id_partida": partida.id_partida
+    				})
+    			});
+
+    			const json1 = await response.json();
+
+    			const response2 = await fetch(apiURL3$4, {
+    				method: "POST",
+    				headers: { "Content-Type": "application/json" },
+    				body: JSON.stringify({
+    					"id_equipo": selectedEquipo2,
+    					"id_torneo": idTorneo,
+    					"id_partida": partida.id_partida
+    				})
+    			});
+
+    			const json2 = await response2.json();
+    			console.log(json1);
+    			console.log(json2);
+    		} else console.log("Son iguales culiau");
+    	}
+
+    	async function crearPartida() {
+    		console.log(resultadoPartida);
+
+    		const response = await fetch(apiURL2$8, {
+    			method: "POST",
+    			headers: { "Content-Type": "application/json" },
+    			body: JSON.stringify({
+    				"id_partida": null,
+    				"resultado_partida": resultadoPartida
+    			})
+    		});
+
+    		const json = await response.json();
+    		console.log(json);
+    		return json;
+    	}
+
+    	const writable_props = ["params"];
+
+    	Object.keys($$props).forEach(key => {
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console_1$g.warn(`<NuevoEquipoTorneoPartida> was created with unknown prop '${key}'`);
+    	});
+
+    	let { $$slots = {}, $$scope } = $$props;
+    	validate_slots("NuevoEquipoTorneoPartida", $$slots, []);
+
+    	function select0_change_handler() {
+    		selectedEquipo1 = select_value(this);
+    		$$invalidate(1, selectedEquipo1);
+    		$$invalidate(0, dataEquipos);
+    	}
+
+    	function select1_change_handler() {
+    		selectedEquipo2 = select_value(this);
+    		$$invalidate(2, selectedEquipo2);
+    		$$invalidate(0, dataEquipos);
+    	}
+
+    	function input_input_handler() {
+    		resultadoPartida = this.value;
+    		$$invalidate(3, resultadoPartida);
+    	}
+
+    	const click_handler = () => insertarPartidaTorneo();
+
+    	$$self.$$set = $$props => {
+    		if ("params" in $$props) $$invalidate(5, params = $$props.params);
+    	};
+
+    	$$self.$capture_state = () => ({
+    		onMount,
+    		apiURL: apiURL$e,
+    		apiURL1: apiURL1$1,
+    		apiURL2: apiURL2$8,
+    		apiURL3: apiURL3$4,
+    		params,
+    		idTorneo,
+    		dataEquiposTorneo,
+    		dataEquiposAux,
+    		dataEquipos,
+    		selectedEquipo1,
+    		selectedEquipo2,
+    		resultadoPartida,
+    		insertarPartidaTorneo,
+    		crearPartida
+    	});
+
+    	$$self.$inject_state = $$props => {
+    		if ("params" in $$props) $$invalidate(5, params = $$props.params);
+    		if ("idTorneo" in $$props) idTorneo = $$props.idTorneo;
+    		if ("dataEquiposTorneo" in $$props) dataEquiposTorneo = $$props.dataEquiposTorneo;
+    		if ("dataEquiposAux" in $$props) dataEquiposAux = $$props.dataEquiposAux;
+    		if ("dataEquipos" in $$props) $$invalidate(0, dataEquipos = $$props.dataEquipos);
+    		if ("selectedEquipo1" in $$props) $$invalidate(1, selectedEquipo1 = $$props.selectedEquipo1);
+    		if ("selectedEquipo2" in $$props) $$invalidate(2, selectedEquipo2 = $$props.selectedEquipo2);
+    		if ("resultadoPartida" in $$props) $$invalidate(3, resultadoPartida = $$props.resultadoPartida);
+    	};
+
+    	if ($$props && "$$inject" in $$props) {
+    		$$self.$inject_state($$props.$$inject);
+    	}
+
+    	return [
+    		dataEquipos,
+    		selectedEquipo1,
+    		selectedEquipo2,
+    		resultadoPartida,
+    		insertarPartidaTorneo,
+    		params,
+    		select0_change_handler,
+    		select1_change_handler,
+    		input_input_handler,
+    		click_handler
+    	];
+    }
+
+    class NuevoEquipoTorneoPartida extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance$h, create_fragment$h, safe_not_equal, { params: 5 });
+
+    		dispatch_dev("SvelteRegisterComponent", {
+    			component: this,
+    			tagName: "NuevoEquipoTorneoPartida",
+    			options,
+    			id: create_fragment$h.name
+    		});
+
+    		const { ctx } = this.$$;
+    		const props = options.props || {};
+
+    		if (/*params*/ ctx[5] === undefined && !("params" in props)) {
+    			console_1$g.warn("<NuevoEquipoTorneoPartida> was created without expected prop 'params'");
+    		}
+    	}
+
+    	get params() {
+    		throw new Error("<NuevoEquipoTorneoPartida>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set params(value) {
+    		throw new Error("<NuevoEquipoTorneoPartida>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+    }
+
+    /* src\App.svelte generated by Svelte v3.24.1 */
+    const file$h = "src\\App.svelte";
+
+    function create_fragment$i(ctx) {
     	let link0;
     	let link1;
     	let link2;
@@ -7273,11 +8321,6 @@ var app = (function () {
     	let t10;
     	let i3;
     	let t12;
-    	let li3;
-    	let a4;
-    	let t13;
-    	let i4;
-    	let t15;
     	let router;
     	let current;
 
@@ -7297,6 +8340,8 @@ var app = (function () {
     					"/NuevoEquipo": NuevoEquipo,
     					"/NuevoTorneo": NuevoTorneo,
     					"/NuevaPartida": NuevaPartida,
+    					"/NuevoEquipoTorneo/:ID_Torneo": NuevoEquipoTorneo,
+    					"/NuevoEquipoTorneoPartida/:ID_Torneo": NuevoEquipoTorneoPartida,
     					"/PerfilJugador/:ID_Servidor": PerfilJugador,
     					"/PerfilEquipo/:ID_Equipo": PerfilEquipo,
     					"/PerfilTorneo/:ID_torneo": PerfilTorneo
@@ -7338,61 +8383,49 @@ var app = (function () {
     			i3 = element("i");
     			i3.textContent = "groups";
     			t12 = space();
-    			li3 = element("li");
-    			a4 = element("a");
-    			t13 = text("Partidas ");
-    			i4 = element("i");
-    			i4.textContent = "sports_mma";
-    			t15 = space();
     			create_component(router.$$.fragment);
     			attr_dev(link0, "href", "https://fonts.googleapis.com/icon?family=Material+Icons");
     			attr_dev(link0, "rel", "stylesheet");
-    			add_location(link0, file$f, 25, 2, 967);
+    			add_location(link0, file$h, 28, 2, 1106);
     			attr_dev(link1, "type", "text/css");
     			attr_dev(link1, "rel", "stylesheet");
     			attr_dev(link1, "href", "css/materialize.min.css");
     			attr_dev(link1, "media", "screen,projection");
-    			add_location(link1, file$f, 27, 2, 1088);
+    			add_location(link1, file$h, 30, 2, 1227);
     			attr_dev(link2, "rel", "stylesheet");
     			attr_dev(link2, "href", "https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css");
-    			add_location(link2, file$f, 28, 2, 1189);
+    			add_location(link2, file$h, 31, 2, 1328);
     			attr_dev(meta, "name", "viewport");
     			attr_dev(meta, "content", "width=device-width, initial-scale=1.0");
-    			add_location(meta, file$f, 30, 2, 1361);
+    			add_location(meta, file$h, 33, 2, 1500);
     			attr_dev(i0, "class", "material-icons");
-    			add_location(i0, file$f, 38, 42, 1543);
+    			add_location(i0, file$h, 41, 42, 1682);
     			attr_dev(a0, "href", "#!");
     			attr_dev(a0, "class", "brand-logo large");
-    			add_location(a0, file$f, 38, 4, 1505);
+    			add_location(a0, file$h, 41, 4, 1644);
     			attr_dev(i1, "class", "material-icons right white-text");
-    			add_location(i1, file$f, 40, 63, 1718);
+    			add_location(i1, file$h, 43, 63, 1857);
     			attr_dev(a1, "href", "/#/Jugadores");
     			set_style(a1, "color", "white");
-    			add_location(a1, file$f, 40, 10, 1665);
-    			add_location(li0, file$f, 40, 6, 1661);
+    			add_location(a1, file$h, 43, 10, 1804);
+    			add_location(li0, file$h, 43, 6, 1800);
     			attr_dev(i2, "class", "material-icons right white-text");
-    			add_location(i2, file$f, 41, 59, 1848);
+    			add_location(i2, file$h, 44, 59, 1987);
     			attr_dev(a2, "href", "/#/Torneos");
     			set_style(a2, "color", "white");
-    			add_location(a2, file$f, 41, 10, 1799);
-    			add_location(li1, file$f, 41, 6, 1795);
+    			add_location(a2, file$h, 44, 10, 1938);
+    			add_location(li1, file$h, 44, 6, 1934);
     			attr_dev(i3, "class", "material-icons right white-text");
-    			add_location(i3, file$f, 42, 59, 1976);
+    			add_location(i3, file$h, 45, 59, 2115);
     			attr_dev(a3, "href", "/#/Equipos");
     			set_style(a3, "color", "white");
-    			add_location(a3, file$f, 42, 10, 1927);
-    			add_location(li2, file$f, 42, 6, 1923);
-    			attr_dev(i4, "class", "material-icons right white-text");
-    			add_location(i4, file$f, 43, 61, 2100);
-    			attr_dev(a4, "href", "/#/Partidas");
-    			set_style(a4, "color", "white");
-    			add_location(a4, file$f, 43, 10, 2049);
-    			add_location(li3, file$f, 43, 6, 2045);
+    			add_location(a3, file$h, 45, 10, 2066);
+    			add_location(li2, file$h, 45, 6, 2062);
     			attr_dev(ul, "class", "right hide-on-med-and-down");
-    			add_location(ul, file$f, 39, 4, 1615);
+    			add_location(ul, file$h, 42, 4, 1754);
     			attr_dev(div, "class", "nav-wrapper  blue darken-1");
-    			add_location(div, file$f, 37, 2, 1460);
-    			add_location(nav, file$f, 36, 0, 1452);
+    			add_location(div, file$h, 40, 2, 1599);
+    			add_location(nav, file$h, 39, 0, 1591);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -7424,12 +8457,7 @@ var app = (function () {
     			append_dev(li2, a3);
     			append_dev(a3, t10);
     			append_dev(a3, i3);
-    			append_dev(ul, t12);
-    			append_dev(ul, li3);
-    			append_dev(li3, a4);
-    			append_dev(a4, t13);
-    			append_dev(a4, i4);
-    			insert_dev(target, t15, anchor);
+    			insert_dev(target, t12, anchor);
     			mount_component(router, target, anchor);
     			current = true;
     		},
@@ -7450,14 +8478,14 @@ var app = (function () {
     			detach_dev(meta);
     			if (detaching) detach_dev(t0);
     			if (detaching) detach_dev(nav);
-    			if (detaching) detach_dev(t15);
+    			if (detaching) detach_dev(t12);
     			destroy_component(router, detaching);
     		}
     	};
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_fragment$g.name,
+    		id: create_fragment$i.name,
     		type: "component",
     		source: "",
     		ctx
@@ -7466,7 +8494,7 @@ var app = (function () {
     	return block;
     }
 
-    function instance$g($$self, $$props, $$invalidate) {
+    function instance$i($$self, $$props, $$invalidate) {
     	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
@@ -7494,7 +8522,9 @@ var app = (function () {
     		NuevaPartida,
     		PerfilJugador,
     		PerfilEquipo,
-    		PerfilTorneo
+    		PerfilTorneo,
+    		NuevoEquipoTorneo,
+    		NuevoEquipoTorneoPartida
     	});
 
     	return [];
@@ -7503,13 +8533,13 @@ var app = (function () {
     class App extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$g, create_fragment$g, safe_not_equal, {});
+    		init(this, options, instance$i, create_fragment$i, safe_not_equal, {});
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
     			tagName: "App",
     			options,
-    			id: create_fragment$g.name
+    			id: create_fragment$i.name
     		});
     	}
     }

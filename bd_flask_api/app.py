@@ -64,7 +64,7 @@ app.add_url_rule('/get_perfil/<id_servidor>/<nombre_jugador>', view_func=views.g
 
 #Routes para equi_torneo_partida
 
-#app.add_url_rule('/delete_equi_torneo_partida/<id_equipo>/<id_torneo>/<id_partida>', view_func=views.delete_equi_torneo_partida, methods=['DELETE'])
+app.add_url_rule('/delete_equi_torneo_partida/<id_equipo>/<id_torneo>/<id_partida>', view_func=views.delete_equi_torneo_partida, methods=['DELETE'])
 app.add_url_rule('/get_equis_torneo_partidas/<id_torneo>', view_func=views.get_equis_torneo_partidas, methods=['GET'])
 app.add_url_rule('/get_equis_torneos_partidas', view_func=views.get_equis_torneos_partidas, methods=['GET'])
 app.add_url_rule('/add_equi_torneo_partida', view_func=views.add_equi_torneo_partida, methods=['POST'])

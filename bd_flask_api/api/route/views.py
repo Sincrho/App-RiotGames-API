@@ -249,7 +249,7 @@ def add_equi_torneo():
 
   db_session.add(new_equi_torneo)
   db_session.commit()
-  return jsonify(equi_torne_schema.dump(new_equi_torneo))
+  return jsonify(equi_torneo_schema.dump(new_equi_torneo))
 
 def get_equis_torneos():
    all_equis_tornes = Equi_torneo.query.all()

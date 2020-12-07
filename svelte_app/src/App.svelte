@@ -18,6 +18,9 @@
   import PerfilJugador from './PerfilJugador.svelte';
   import PerfilEquipo from  './PerfilEquipo.svelte';
   import PerfilTorneo from  './PerfilTorneo.svelte';
+  import NuevoEquipoTorneo from './NuevoEquipoTorneo.svelte';
+  import NuevoEquipoTorneoPartida from './NuevoEquipoTorneoPartida.svelte';
+
 </script>
 
 
@@ -41,7 +44,7 @@
       <li><a href="/#/Jugadores" style="color:white">Jugadores <i class="material-icons right white-text">person_outline</i></a></li>
       <li><a href="/#/Torneos" style="color:white">Torneos <i class="material-icons right white-text">emoji_events</i></a></li>
       <li><a href="/#/Equipos" style="color:white">Equipos <i class="material-icons right white-text">groups</i></a></li>
-      <li><a href="/#/Partidas" style="color:white">Partidas <i class="material-icons right white-text">sports_mma</i></a></li>
+      <!--<li><a href="/#/Partidas" style="color:white">Partidas <i class="material-icons right white-text">sports_mma</i></a></li>-->
     </ul>
   </div>
 </nav>
@@ -64,12 +67,11 @@
   '/NuevoEquipo':NuevoEquipo,
   '/NuevoTorneo':NuevoTorneo,
   '/NuevaPartida': NuevaPartida,
+  '/NuevoEquipoTorneo/:ID_Torneo': NuevoEquipoTorneo,
+  '/NuevoEquipoTorneoPartida/:ID_Torneo':NuevoEquipoTorneoPartida, 
   '/PerfilJugador/:ID_Servidor': PerfilJugador,
   '/PerfilEquipo/:ID_Equipo': PerfilEquipo,
   '/PerfilTorneo/:ID_torneo': PerfilTorneo
-
-   
-
 }} />
 
 
