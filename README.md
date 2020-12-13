@@ -16,6 +16,23 @@ Configuracion entorno
     Iniciar servidor: pipenv run python -m flask run
 	
 	Para el svelte npm install materialize-css@next
+
+Referencia
+    Como hacer un requirements.txt con pipenv para usarlo en docker
+    https://pipenv-fork.readthedocs.io/en/latest/basics.html
+
+Docker
+    Iniciar Api en flask:   /bd_flask_api
+                            docker build -t flaskapp:latest .
+                            docker run -it -d -p 5000:5000 flaskapp
+    Sitio hecho con Svelte: /svelte_app
+                            docker build -t svelteapp:latest .
+                            docker run -it -d -p 5001:5000 svelteapp
+
+Sino usar el compose ya hecho
+
+
+
     
     
     

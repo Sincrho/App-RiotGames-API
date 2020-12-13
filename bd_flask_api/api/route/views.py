@@ -41,7 +41,7 @@ def add_jugador():
   db_session.add(new_jugador)
   db_session.commit()
 
-  return jsonify(jugador_schema.dumps(new_jugador))
+  return jsonify(jugador_schema.dump(new_jugador))
 
 def get_jugadores():
   all_jugadores = Jugadores.query.all()
@@ -62,7 +62,7 @@ def update_jugador(id_jugador):
   jugador.nombre_jugador = nombre_jugador
   db_session.commit()
 
-  return jsonify(jugador_schema.dumps(jugador))
+  return jsonify(jugador_schema.dump(jugador))
 
 
 def delete_jugador(id_jugador):
@@ -70,7 +70,7 @@ def delete_jugador(id_jugador):
   db_session.delete(jugador)
   db_session.commit()
 
-  return jsonify(jugador_schema.dumps(jugador))
+  return jsonify(jugador_schema.dump(jugador))
 
 
 #FUNCIONES PARA EQUIPO
@@ -83,7 +83,7 @@ def add_equipo():
 
   db_session.add(new_equipo)
   db_session.commit()
-  return jsonify(equipo_schema.dumps(new_equipo))
+  return jsonify(equipo_schema.dump(new_equipo))
 
 def get_equipos():
   all_equipos = Equipos.query.all()
@@ -163,7 +163,7 @@ def delete_torneo(id_torneo):
   db_session.delete(torneo)
   db_session.commit()
 
-  return jsonify(torneo_schema.dumps(torneo))
+  return jsonify(torneo_schema.dump(torneo))
 
 #FUNCIONES PARA PARTIDAS
 
@@ -176,7 +176,7 @@ def add_partida():
   db_session.add(new_partida)
   db_session.commit()
 
-  return jsonify(partida_schema.dumps(new_partida))
+  return jsonify(partida_schema.dump(new_partida))
 
 def get_partidas():
   """ devuelve las partidas 
