@@ -1,0 +1,12 @@
+Devuelve un equipo en especifico de la base de datos.
+  ---
+parameters:
+  - in: path
+    name: id_equipo
+    description: El id del equipo que se quiere buscar.
+    schema:
+      type: integer
+    required: true
+responses:
+  200:
+      description: Te devuelve el equipo que se buscaba.

@@ -1,0 +1,23 @@
+Actualiza un jugador de la base de datos.
+  ---
+parameters:
+  - in: path
+    name: id_jugador
+    description: El id del jugador que se quiere actualizar.
+    schema:
+      type: integer
+    required: true
+  - in: body
+    name: Jugador
+    description: Los datos nuevos que se quieren que tengan el jugador, id_servidor validos en get_servidores.
+    schema:
+      type: object
+      properties:
+        id_servidor:
+          type: string
+        nombre_jugador:
+          type: string
+    required: true
+responses:
+  200:
+      description: Te devuelve el jugador con los datos actualizados.

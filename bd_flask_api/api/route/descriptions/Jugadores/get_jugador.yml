@@ -1,0 +1,12 @@
+Devuelve un jugador en especifico de la base de datos.
+  ---
+parameters:
+  - in: path
+    name: id_jugador
+    description: El id del jugador que se quiere buscar.
+    schema:
+      type: integer
+    required: true
+responses:
+  200:
+      description: Te devuelve el jugador que se buscaba.

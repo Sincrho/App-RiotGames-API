@@ -1,0 +1,18 @@
+Agrega un servidor a la base de datos.
+  ---
+parameters:
+  - in: body
+    name: Servidor
+    description: El servidor a crear.
+    schema:
+      type: object
+      properties:
+        id_servidor:
+          type: string
+          value: null
+        region_servidor:
+          type: string
+    required: true
+responses:
+  200:
+      description: Te devuelve el mismo servidor agregado.

@@ -1,0 +1,21 @@
+Actualiza una partida de la base de datos.
+  ---
+parameters:
+  - in: path
+    name: id_partida
+    description: El id de la partida que se quiere actualizar.
+    schema:
+      type: integer
+    required: true
+  - in: body
+    name: Partida
+    description: Los datos nuevos que se quieren que tengan la partida.
+    schema:
+      type: object
+      properties:
+        resultado_partida:
+          type: string
+    required: true
+responses:
+  200:
+      description: Te devuelve la partida con los datos actualizados.

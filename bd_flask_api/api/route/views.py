@@ -32,6 +32,9 @@ equi_torneo_partidas_schema = Equi_torneo_partidaSchema (many=True)
 
 #FUNCIONES PARA JUGADOR
 def add_jugador():
+  """ 
+  file: descriptions/Jugadores/add_jugador.yml
+  """
   id_jugador = request.json['id_jugador']
   id_servidor = request.json['id_servidor']
   nombre_jugador = request.json['nombre_jugador']
@@ -44,20 +47,27 @@ def add_jugador():
   return jsonify(jugador_schema.dump(new_jugador))
 
 def get_jugadores():
+  """ 
+  file: descriptions/Jugadores/get_jugadores.yml
+  """
   all_jugadores = Jugadores.query.all()
   result = jugadores_schema.dump(all_jugadores)
   return jsonify(result)
 
 def get_jugador(id_jugador):
+  """ 
+  file: descriptions/Jugadores/get_jugador.yml
+  """
   jugador = Jugadores.query.get(id_jugador)
   return jsonify(jugador_schema.dump(jugador))
 
 def update_jugador(id_jugador):
+  """ 
+  file: descriptions/Jugadores/update_jugador.yml
+  """
   jugador = Jugadores.query.get(id_jugador)
-
   id_servidor = request.json['id_servidor']
   nombre_jugador = request.json['nombre_jugador']
-
   jugador.id_servidor = id_servidor
   jugador.nombre_jugador = nombre_jugador
   db_session.commit()
@@ -66,6 +76,9 @@ def update_jugador(id_jugador):
 
 
 def delete_jugador(id_jugador):
+  """ 
+  file: descriptions/Jugadores/delete_jugador.yml
+  """
   jugador = Jugadores.query.get(id_jugador)
   db_session.delete(jugador)
   db_session.commit()
@@ -76,6 +89,9 @@ def delete_jugador(id_jugador):
 #FUNCIONES PARA EQUIPO
 
 def add_equipo():
+  """ 
+  file: descriptions/Equipos/add_equipo.yml
+  """
   id_equipo = request.json['id_equipo']
   nombre_equipo = request.json['nombre_equipo']
 
@@ -86,15 +102,24 @@ def add_equipo():
   return jsonify(equipo_schema.dump(new_equipo))
 
 def get_equipos():
+  """ 
+  file: descriptions/Equipos/get_equipos.yml
+  """
   all_equipos = Equipos.query.all()
   result = equipos_schema.dump(all_equipos)
   return jsonify(result)
 
 def get_equipo(id_equipo):
+  """ 
+  file: descriptions/Equipos/get_equipo.yml
+  """
   equipo = Equipos.query.get(id_equipo)
   return jsonify(equipo_schema.dump(equipo))
 
 def update_equipo(id_equipo):
+  """ 
+  file: descriptions/Equipos/update_equipo.yml
+  """
   equipo = Equipos.query.get(id_equipo)
   nombre_equipo = request.json['nombre_equipo']
   equipo.nombre_equipo = nombre_equipo
@@ -102,6 +127,9 @@ def update_equipo(id_equipo):
   return jsonify(equipo_schema.dump(equipo))
 
 def delete_equipo(id_equipo):
+  """ 
+  file: descriptions/Equipos/delete_equipo.yml
+  """
   equipo = Equipos.query.get(id_equipo)
   db_session.delete(equipo)
   db_session.commit()
@@ -111,6 +139,9 @@ def delete_equipo(id_equipo):
 #FUNCIONES PARA SERVIDORES
 
 def add_servidor():
+  """ 
+  file: descriptions/Servidores/add_servidor.yml
+  """
   id_servidor = request.json['id_servidor']
   region_servidor = request.json['region_servidor']
 
@@ -122,16 +153,25 @@ def add_servidor():
   return jsonify(servidor_schema.dump(new_servidor))
 
 def get_servidores():
+  """ 
+  file: descriptions/Servidores/get_servidores.yml
+  """
   all_servidores = Servidores.query.all()
   result = servidores_schema.dump(all_servidores)
   return jsonify(result)
 
 def get_servidor(id_servidor):
+  """ 
+  file: descriptions/Servidores/get_servidor.yml
+  """
   servidor = Servidores.query.get(id_servidor)
   return jsonify(servidor_schema.dump(servidor))
 
 #FUNCIONES PARA TORNEO
 def add_torneo():
+  """ 
+  file: descriptions/Torneos/add_torneo.yml
+  """
   id_torneo = request.json['id_torneo']
   nombre_torneo = request.json['nombre_torneo']
 
@@ -143,15 +183,24 @@ def add_torneo():
   return jsonify(torneo_schema.dump(new_torneo))
 
 def get_torneos():
+  """ 
+  file: descriptions/Torneos/get_torneos.yml
+  """
   all_torneos = Torneos.query.all()
   result = torneos_schema.dump(all_torneos)
   return jsonify(result)
 
 def get_torneo(id_torneo):
+  """ 
+  file: descriptions/Torneos/get_torneo.yml
+  """
   torneo = Torneos.query.get(id_torneo)
   return jsonify(torneo_schema.dump(torneo))
 
 def update_torneo(id_torneo):
+  """ 
+  file: descriptions/Torneos/update_torneo.yml
+  """
   torneo = Torneos.query.get(id_torneo)
   nombre_torneo = request.json['nombre_torneo']
   torneo.nombre_torneo = nombre_torneo
@@ -159,6 +208,9 @@ def update_torneo(id_torneo):
   return jsonify(torneo_schema.dump(torneo))
 
 def delete_torneo(id_torneo):
+  """ 
+  file: descriptions/Torneos/delete_torneo.yml
+  """
   torneo = Torneos.query.get(id_torneo)
   db_session.delete(torneo)
   db_session.commit()
@@ -168,6 +220,9 @@ def delete_torneo(id_torneo):
 #FUNCIONES PARA PARTIDAS
 
 def add_partida():
+  """ 
+  file: descriptions/Partidas/add_partida.yml
+  """
   id_partida = request.json['id_partida']
   resultado_partida = request.json['resultado_partida']
 
@@ -179,25 +234,24 @@ def add_partida():
   return jsonify(partida_schema.dump(new_partida))
 
 def get_partidas():
-  """ devuelve las partidas 
-  ---
-   parameters:
-     - name: parametro
-   responses:
-      200:
-          description: trajo todas las partidas
-          examples:
-            result: [1,2,3]          
+  """ 
+  file: descriptions/Partidas/get_partidas.yml
   """
   all_partidas = Partidas.query.all()
   result = partidas_schema.dump(all_partidas)
   return jsonify(result)
 
 def get_partida(id_partida):
+  """ 
+  file: descriptions/Partidas/get_partida.yml
+  """
   partida = Partidas.query.get(id_partida)
   return jsonify(partida_schema.dump(partida))
 
 def update_partida(id_partida):
+  """ 
+  file: descriptions/Partidas/update_partida.yml
+  """
   partida = Partidas.query.get(id_partida)
   resultado_partida = request.json['resultado_partida']
   partida.resultado_partida = resultado_partida
@@ -205,6 +259,9 @@ def update_partida(id_partida):
   return jsonify(partida_schema.dump(partida))
 
 def delete_partida(id_partida):
+  """ 
+  file: descriptions/Partidas/delete_partida.yml
+  """
   partida = Partidas.query.get(id_partida)
   db_session.delete(partida)
   db_session.commit()
@@ -305,9 +362,6 @@ def get_perfil(id_servidor,nombre_jugador):
   request_league= requests.get("https://"+id_servidor+".api.riotgames.com/lol/league/v4/entries/by-summoner/"+summoner_id+"?api_key="+apiKey)
   json_perfil = jsonify(request_league.text)
   return json_perfil
-
-
-
 
 
 #Inicio

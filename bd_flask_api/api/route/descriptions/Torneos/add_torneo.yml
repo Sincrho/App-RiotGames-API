@@ -1,0 +1,18 @@
+Agrega un torneo a la base de datos.
+  ---
+parameters:
+  - in: body
+    name: Torneo
+    description: El torneo a crear, enviar null en id_torneo.
+    schema:
+      type: object
+      properties:
+        id_torneo:
+          type: integer
+          value: null
+        nombre_torneo:
+          type: string
+    required: true
+responses:
+  200:
+      description: Te devuelve el mismo torneo agregado.

@@ -1,0 +1,5 @@
+Devuelve todos las partidas cargadas en la base de datos.
+  ---
+responses:
+  200:
+      description: Devuelve correctamente todos las partidas.

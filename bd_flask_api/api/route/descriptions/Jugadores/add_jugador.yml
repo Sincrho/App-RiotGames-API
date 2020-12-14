@@ -1,0 +1,20 @@
+Agrega un jugador a la base de datos.
+  ---
+parameters:
+  - in: body
+    name: Jugador
+    description: El jugador a crear, enviar null en id_jugador, id_servidor validos en get_servidores.
+    schema:
+      type: object
+      properties:
+        id_jugador:
+          type: integer
+          value: null
+        id_servidor:
+          type: string
+        nombre_jugador:
+          type: string
+    required: true
+responses:
+  200:
+      description: Te devuelve el mismo jugador agregado.

@@ -29,9 +29,10 @@ Docker
                             docker build -t svelteapp:latest .
                             docker run -it -d -p 5001:5000 svelteapp
 
-Sino usar el compose ya hecho
+    Sino usar el compose ya hecho
 
-
+Testing
+    Iniciar los test: pipenv run python -m unittest
 
     
     

@@ -1,0 +1,12 @@
+Devuelve un servidor en especifico de la base de datos.
+  ---
+parameters:
+  - in: path
+    name: id_servidor
+    description: El id del servidor que se quiere buscar.
+    schema:
+      type: integer
+    required: true
+responses:
+  200:
+      description: Te devuelve el servidor que se buscaba.

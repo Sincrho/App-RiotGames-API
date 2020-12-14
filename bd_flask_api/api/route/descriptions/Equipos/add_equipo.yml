@@ -1,0 +1,18 @@
+Agrega un equipo a la base de datos.
+  ---
+parameters:
+  - in: body
+    name: Equipo
+    description: El equipo a crear, enviar null en id_equipo.
+    schema:
+      type: object
+      properties:
+        id_equipo:
+          type: integer
+          value: null
+        nombre_equipo:
+          type: string
+    required: true
+responses:
+  200:
+      description: Te devuelve el mismo equipo agregado.

@@ -1,0 +1,5 @@
+Devuelve todos los jugadores cargados en la base de datos.
+  ---
+responses:
+  200:
+      description: Devuelve correctamente todos los jugadores.

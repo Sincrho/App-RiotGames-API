@@ -1,0 +1,21 @@
+Actualiza un torneo de la base de datos.
+  ---
+parameters:
+  - in: path
+    name: id_torneo
+    description: El id del torneo que se quiere actualizar.
+    schema:
+      type: integer
+    required: true
+  - in: body
+    name: Torneo
+    description: Los datos nuevos que se quieren que tengan el torneo.
+    schema:
+      type: object
+      properties:
+        nombre_torneo:
+          type: string
+    required: true
+responses:
+  200:
+      description: Te devuelve el torneo con los datos actualizados.

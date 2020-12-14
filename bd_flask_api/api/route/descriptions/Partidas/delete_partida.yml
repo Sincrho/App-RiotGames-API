@@ -1,0 +1,12 @@
+Borra una partida en especifico de la base de datos.
+  ---
+parameters:
+  - in: path
+    name: id_partida
+    description: El id de la partida que se quiere borrar.
+    schema:
+      type: integer
+    required: true
+responses:
+  200:
+      description: Te devuelve la partida que se borro.
