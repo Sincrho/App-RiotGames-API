@@ -38,7 +38,7 @@
       const json = await response.json()
       let result = JSON.stringify(json)
       console.log(result)
-      location.href = "/#/Partidas";
+      location.href = "/#/Torneos";
     }
   
   

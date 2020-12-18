@@ -1,41 +1,41 @@
-
 <script>
   import { onMount } from "svelte";
-  const apiURL = "http://127.0.0.1:5000/get_equis_torneo/";
-  const apiURL1 = "http://127.0.0.1:5000/get_equipo/";
-  const apiURL2 = "http://127.0.0.1:5000/add_partida";
-  const apiURL3=  "http://127.0.0.1:5000/add_equi_torneo_partida";
-
   export let params;
+  const apiURLGetEquiposTorneo = "http://127.0.0.1:5000/get_equis_torneo/";
+  const apiURLGetEquipo = "http://127.0.0.1:5000/get_equipo/";
+  const apiURLAddPartida = "http://127.0.0.1:5000/add_partida";
+  const apiURLAddEquiTorneoPartida=  "http://127.0.0.1:5000/add_equi_torneo_partida";
+
+
   let idTorneo = params.ID_Torneo;
 
-  let dataEquiposTorneo = [];
-  let dataEquiposAux= [];
+  
   let dataEquipos=[];
 
-  let selectedEquipo1;
-  let selectedEquipo2;
+  let selectedEquipo1=null;
+  let selectedEquipo2=null;
   let resultadoPartida;
-  onMount(async function() {                 
-    const response = await fetch(apiURL+idTorneo);
-    let json  = await response.json();
-    dataEquiposTorneo = json;
-    console.log(dataEquiposTorneo);
+  onMount(async function() {      
+    let dataEquiposAux= [];           
+    const response = await fetch(apiURLGetEquiposTorneo+idTorneo);// trae los equipos de un torneo
+    let dataEquiposTorneo  = await response.json();
+    //console.log(dataEquiposTorneo);
     //console.log(dataEquiposTorneo.length);
     for(let i = 0; i < dataEquiposTorneo.length; i++) {
-      const response2 = await fetch(apiURL1+dataEquiposTorneo[i].id_equipo);
-      let json2  = await response2.json();
-      dataEquiposAux.push(json2);
+      const responseEquipo = await fetch(apiURLGetEquipo+dataEquiposTorneo[i].id_equipo); // obtiene los datos de todos los equipos del torneo
+      let jsonEquipo  = await responseEquipo.json();
+      dataEquiposAux.push(jsonEquipo); // mete equipo por equipo 
   } 
     dataEquipos = dataEquiposAux; // svelte no reacciona push.....
-    console.log(dataEquipos);
+    //console.log(dataEquipos);
   });
+
   async function insertarPartidaTorneo() {
 
-    if (selectedEquipo1 != selectedEquipo2){
+    if (selectedEquipo1 != selectedEquipo2 && selectedEquipo1!= null && selectedEquipo2!=null ){
       const partida=JSON.parse (await crearPartida());
-      
-      const response= await fetch(apiURL3,{
+      // insertamos la partida con sus dos equipos a un torneo, por eso se hace la misma consulta 2 veces
+      const response= await fetch(apiURLAddEquiTorneoPartida,{
             method: 'POST', 
             headers: {'Content-Type' : 'application/json'},
             body:JSON.stringify({
@@ -44,8 +44,8 @@
              "id_partida": partida.id_partida
            })
        });
-      const json1 = await response.json()
-     const response2= await fetch(apiURL3,{
+      //const json1 = await response.json()
+     const response2= await fetch(apiURLAddEquiTorneoPartida,{
          method: 'POST', 
          headers: {'Content-Type' : 'application/json'},
          body:JSON.stringify({
@@ -54,20 +54,18 @@
            "id_partida": partida.id_partida
          })
       });
-      const json2 = await response2.json()
-      console.log(json1);
-      console.log(json2);
-
+      //const json2 = await response2.json()
+      //console.log(json1);
+      //console.log(json2);
+      location.href = "/#/PerfilTorneo/"+idTorneo;
     }
     else
-      console.log("Son iguales culiau");
-
-        
+      alert("Los equipos no son validos");        
   }
 
   async function crearPartida() {
     console.log(resultadoPartida);
-    const response= await fetch(apiURL2,{
+    const response= await fetch(apiURLAddPartida,{
             method: 'POST', 
             headers: {'Content-Type' : 'application/json'},
             body:JSON.stringify({
@@ -76,7 +74,7 @@
             })
         });
     const json = await response.json()
-    console.log(json);
+    //console.log(json);
     return json;
   }  
 
@@ -124,11 +122,10 @@
                 <input style="border-radius: 15px" bind:value={resultadoPartida} placeholder="Por Determinar" id="first_name" type="text" class="white validate black-text">
                   <label  class="active " for="first_name ">Resultado</label>
               </div>
-          </div>
-          <a style="color:white" class="waves-effect waves-light btn deep- blue darken-1" on:click={()=> insertarPartidaTorneo()}><i class="material-icons left white-text ">check_circle</i>Agregar</a>
+              <button class ="waves-effect waves-light btn  blue darken-1" on:click={()=> insertarPartidaTorneo()}><i class="material-icons left ">check_circle</i>Agregar</button>
+            </div>
 
-          <div class = "container">
-          </div>
+          
         </div>
       </div>
     </div>

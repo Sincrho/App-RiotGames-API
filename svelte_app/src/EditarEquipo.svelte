@@ -1,106 +1,77 @@
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js">
+<script>
+  import { onMount } from "svelte";
+  export let params
+  const apiURLGetEquipos = "http://127.0.0.1:5000/get_equipo/";
+  const apiURLUpdEquipos = "http://127.0.0.1:5000/update_equipo/";
+  const apiURLDelEquipos = "http://127.0.0.1:5000/delete_equipo/";
 
-    const apiURL = "http://127.0.0.1:5000/get_equipo/";
-
-    const apiURL2 = "http://127.0.0.1:5000/update_equipo/";
-
-    const apiURL3 = "http://127.0.0.1:5000/delete_equipo/"
-
-    const apiURLx = "http://127.0.0.1:5000/add_equipo"
-
-    let dataEquipo =[];
+  let dataEquipo =[];
+  let nombreEquipoNuevo = ""; 
+  let idEquipo = params.ID_Equipo; // idEquipo para los links 
   
-    let nombreEquipoNuevo = "";
+  onMount(async function() {
+         const response = await fetch(apiURLGetEquipos+idEquipo);
+         let json  = await response.json();
+         dataEquipo = json;
+         //console.log(dataEquipo)
+  }); 
 
-
-    import { onMount } from "svelte";
-    export let params
+  async function actualizarEquipo() {
+    if (nombreEquipoNuevo =="")
+      nombreEquipoNuevo=dataEquipo.nombre_equipo
+    const response= await fetch(apiURLUpdEquipos+idEquipo,{
+            method: 'PUT', 
+            headers: {'Content-Type' : 'application/json'},
+            body:JSON.stringify({
+              "id_equipo": null,
+              "nombre_equipo": nombreEquipoNuevo
+            })
+        });
+    location.href = "/#/Equipos";   
+    //const json = await response.json()
     
-    let idEquipo = params.ID_Equipo
+    //let result = JSON.stringify(json)
+    //console.log(result)
     
-    onMount(async function() {
-           const response = await fetch(apiURL+idEquipo);
-           let json  = await response.json();
-           dataEquipo = json;
-           console.log(dataEquipo)
-    }); 
-  
-    async function actualizarEquipo() {
+  }
 
-      if (nombreEquipoNuevo =="")
-        nombreEquipoNuevo=dataEquipo.nombre_equipo
 
-      const response= await fetch(apiURL2+idEquipo,{
-              method: 'PUT', 
-              headers: {'Content-Type' : 'application/json'},
-              body:JSON.stringify({
-                "id_equipo": null,
-                "nombre_equipo": nombreEquipoNuevo
-              })
-          });
-      const json = await response.json()
-      let result = JSON.stringify(json)
-      console.log(result)
-      location.href = "/#/Equipos";
-    }
-  
-  
-    async function eliminarEquipo() {
-      const response= await fetch(apiURL3+idEquipo,{
-              method: 'DELETE'
-          });
-      const json = await response.json()
-      let result = JSON.stringify(json)
-      console.log(result)
-      location.href = "/#/Equipos";
-    }
-  
-    async function crearEquipo() {
-      const response= await fetch(apiURLx,{
-              method: 'POST', 
-              headers: {'Content-Type' : 'application/json'},
-              body:JSON.stringify({
-                "id_equipo": null,
-                "nombre_equipo": "SHANTI DE LA AUSTRALIO"
-              })
-          });
-      const json = await response.json()
-      let result = JSON.stringify(json)
-      console.log(result)
-    }   
+  async function eliminarEquipo() {
+    const response= await fetch(apiURLDelEquipos+idEquipo,{
+            method: 'DELETE'
+        });
+    location.href = "/#/Equipos";
+    //const json = await response.json()
+    //let result = JSON.stringify(json)
+    //console.log(result)
+  }
 </script>
   
        
               
-<svelte:head>
-    <!--Import Google Icon Font-->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!--Import materialize.css-->
-    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <!--Let browser know website is optimized for mobile-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-</svelte:head>
+
 
 
 <body style="background-image: url(https://lolstatic-a.akamaihd.net/rso-login-page/2.9.34/assets/riot_desktop_background_2x.jpg)" >
   <div class="container " style ="padding-top: 10%">
     <div class = "container">
       <div class="col s12 m4 l8 card blue-grey lighten-5">
-        <div class="card-content black-text thick " >
-          <span class="card-title center " style = "color: #263238 ;font-size: 2em;font-weight: bolder;">Editar Equipo</span>
-
+        <!--head de card-->
+        <div class="card-content black-text" >
+          <span class="card-title center" style = "color: #263238 ;font-size: 2em;font-weight: bolder;">Editar Equipo</span>
         </div>
+         <!--body de card-->
         <div class="card-action">
           <div class ="container">
-            <div class="row input-field col s6 offset ">
-            <input style="border-radius: 20px" bind:value={nombreEquipoNuevo} placeholder={dataEquipo.nombre_equipo} class="white validate black-text">
-              <label  class="active " for="first_name ">Nombre Equipo</label>
+            <div class="row input-field">
+              <input id ="nombre_equipo" style="border-radius: 20px" bind:value={nombreEquipoNuevo} placeholder={dataEquipo.nombre_equipo} class="white validate black-text">
+              <label class="active" for="nombre_equipo">Nombre Equipo</label>
             </div>
           </div>
-          <div class = "container">    
-              <button href="/#/Jugadores" class ="waves-effect waves-light btn blue darken-1" on:click={()=> actualizarEquipo()}><i class="material-icons left ">check_circle</i>Confirmar</button>
-              <button href="/#/Jugadores" class ="waves-effect waves-light btn  blue darken-1" on:click={()=> eliminarEquipo()}><i class="material-icons left ">delete</i>Eliminar</button>
+
+          <div class = "container">
+              <button class ="waves-effect waves-light btn blue darken-1" on:click={()=> actualizarEquipo()}><i class="material-icons left ">check_circle</i>Confirmar</button>
+              <button class ="waves-effect waves-light btn  blue darken-1" on:click={()=> eliminarEquipo()}><i class="material-icons left ">delete</i>Eliminar</button>
           </div>    
 
         </div>
@@ -111,32 +82,5 @@
 
 
 
-<body style="background-image: url(https://lolstatic-a.akamaihd.net/rso-login-page/2.9.34/assets/riot_desktop_background_2x.jpg)">
-      <div class="container" style="padding-top:7%">  
-        <table class="highlight centered ">
-          <thead class="blue darken-1 white-text">
-            <tr>
-              <th on:click={sort("id_servidor")}>Servidor</th>
-              <th on:click={sort("nombre_jugador")}>Jugador</th>
-              <th></th>
-            </tr>
-          </thead>
-          <!-- <tbody class ="blue-grey lighten-4">-->   
-          <tbody style = "background: rgba(0,0,0,0.5);">
-            {#each data as row}
-              <tr>
-                <td class="blue-text">{row.id_servidor}</td>
-              <td><a href="/#/PerfilJugador/{row.id_servidor}*{row.nombre_jugador}">{row.nombre_jugador}</a></td>
-                <td><a href="/#/EditarJugador/{row.id_jugador}"><i class="material-icons left blue-text">edit</i></a></td>
-              </tr>
-            {/each}
-          </tbody>
-        </table>
-       
-       
-        <a href="/#/NuevoJugador" class="btn-floating btn-large waves-effect waves- blue darken-1"><i class="material-icons left">add</i></a>
 
-      </div>
-
-        
-  </body>
+  

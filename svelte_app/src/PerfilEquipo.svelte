@@ -1,28 +1,41 @@
 <script>
   import { onMount } from "svelte";
-import { loop_guard } from "svelte/internal";
   export let params
-  let idEquipo = params.ID_Equipo
-  const apiURL = "http://127.0.0.1:5000/get_equi_jugas/";
-  const apiURL2 = "http://127.0.0.1:5000/get_jugador/";
-  let dataJugadores = [];
-  let dataJugadoresEquipo = [];
-  let dataJugadoresAux =[];
-    onMount(async function() {
 
-        const response = await fetch(apiURL+idEquipo);
-        let json  = await response.json();
-        dataJugadoresEquipo = json;
+  let idEquipo = params.ID_Equipo // para la url de la api
+
+  const apiURLGetEquiJugadores = "http://127.0.0.1:5000/get_equi_jugas/";
+  const apiURLGetJugador = "http://127.0.0.1:5000/get_jugador/";
+  const apiURLDelJugadorEquipo = "http://127.0.0.1:5000/delete_equi_juga/";
+  let dataJugadores = [];
+
+  onMount(async function() {
+    let dataJugadoresAux =[];    
+    const response = await fetch(apiURLGetEquiJugadores+idEquipo);
+    let dataJugadoresEquipo  = await response.json();
+  
+
+    for(let i = 0; i < dataJugadoresEquipo.length; i++) {
+      const response = await fetch(apiURLGetJugador+dataJugadoresEquipo[i].id_jugador);
+      let dataJugador  = await response.json();
+      dataJugadoresAux.push(dataJugador);
+    } 
+    dataJugadores = dataJugadoresAux; // svelte no reacciona push.....
    
-        for(let i = 0; i < dataJugadoresEquipo.length; i++) {
-          const response = await fetch(apiURL2+dataJugadoresEquipo[i].id_jugador);
-          let json2  = await response.json();
-          dataJugadoresAux.push(json2);
-        } 
-        dataJugadores = dataJugadoresAux; // svelte no reacciona push.....
-     
-    });  
+  });
+
+  async function BorrarJugadorEquipo(p_id_jugador){ // elimina la relacion equipo torneo partida
+      const response= await fetch(apiURLDelJugadorEquipo+idEquipo+"/"+p_id_jugador,{
+              method: 'DELETE'
+          });
+      
+      const json = await response.json()
+      let result = JSON.stringify(json)
+      console.log(result)
+      location.reload();
+    }  
 </script>
+
 
   <body style="background-image: url(https://lolstatic-a.akamaihd.net/rso-login-page/2.9.34/assets/riot_desktop_background_2x.jpg)">
     <div class="container" style="padding-top:7%">  
@@ -34,20 +47,20 @@ import { loop_guard } from "svelte/internal";
             <th></th>
           </tr>
         </thead>
-        <!-- <tbody class ="blue-grey lighten-4">-->   
         <tbody style = "background: rgba(0,0,0,0.5);">
           {#each dataJugadores as row}
             <tr>
               <td class="blue-text">{row.id_servidor}</td>
-            <td><a href="/#/PerfilJugador/{row.id_servidor}*{row.nombre_jugador}">{row.nombre_jugador}</a></td>
-              <td><a href="/#/EditarJugador/{row.id_jugador}"><i class="material-icons left blue-text">edit</i></a></td>
+              <td><a href="/#/PerfilJugador/{row.id_servidor}*{row.nombre_jugador}">{row.nombre_jugador}</a></td>
+              <td><a style="cursor:pointer;"on:click={()=> BorrarJugadorEquipo(row.id_jugador)}><i class="material-icons left blue-text ">delete</i></a></td>
+              <!--<td><a href="/#/EditarJugador/{row.id_jugador}"><i class="material-icons left blue-text">delete</i></a></td>-->
             </tr>
           {/each}
         </tbody>
       </table>
-      <a href="/#/NuevoJugador" class="btn-floating btn-large waves-effect waves- blue darken-1"><i class="material-icons left">add</i></a>
-
-    </div>
+      <a href="/#/NuevoJugadorEquipo/{idEquipo}" class="btn-floating btn-large waves-effect waves- blue darken-1"><i class="material-icons left">add</i></a>
+ 
+    </div>  
 
         
   </body>

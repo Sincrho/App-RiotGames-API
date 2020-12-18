@@ -1,10 +1,10 @@
 <script>
-  const apiURL = "http://127.0.0.1:5000/add_torneo"
+  const apiURLAddTorneo = "http://127.0.0.1:5000/add_torneo"
 
   let nombreTorneoNuevo = "";
 
   async function crearTorneo() {
-    const response= await fetch(apiURL,{
+    const response= await fetch(apiURLAddTorneo,{
             method: 'POST', 
             headers: {'Content-Type' : 'application/json'},
             body:JSON.stringify({
@@ -12,10 +12,10 @@
               "nombre_torneo": nombreTorneoNuevo
             })
         });
-    const json = await response.json()
-    let result = JSON.stringify(json)
-    location.href = "/#/Torneos";
-    console.log(result)
+    location.href = "/#/Torneos";    
+    //const json = await response.json()
+    //let result = JSON.stringify(json)
+    //console.log(result)
   }   
 </script>
 
@@ -36,10 +36,8 @@
             </div>
           </div>
           <div class = "container">
-              <a class="waves-effect waves-light btn deep- blue darken-1" on:click={()=> crearTorneo()}><i class="material-icons left white-text ">check_circle</i>Agregar</a>
-              
+              <button class ="waves-effect waves-light btn  blue darken-1" on:click={()=> crearTorneo()}><i class="material-icons left ">check_circle</i>Agregar</button>
           </div>
-
         </div>
       </div>
     </div>

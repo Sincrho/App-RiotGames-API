@@ -20,7 +20,7 @@
   import PerfilTorneo from  './PerfilTorneo.svelte';
   import NuevoEquipoTorneo from './NuevoEquipoTorneo.svelte';
   import NuevoEquipoTorneoPartida from './NuevoEquipoTorneoPartida.svelte';
-
+  import NuevoJugadorEquipo from './NuevoJugadorEquipo.svelte';
 </script>
 
 
@@ -67,8 +67,13 @@
   '/NuevoEquipo':NuevoEquipo,
   '/NuevoTorneo':NuevoTorneo,
   '/NuevaPartida': NuevaPartida,
+  '/NuevoJugadorEquipo/:ID_Equipo': NuevoJugadorEquipo,
+
   '/NuevoEquipoTorneo/:ID_Torneo': NuevoEquipoTorneo,
-  '/NuevoEquipoTorneoPartida/:ID_Torneo':NuevoEquipoTorneoPartida, 
+  '/NuevoEquipoTorneoPartida/:ID_Torneo':NuevoEquipoTorneoPartida,
+
+
+
   '/PerfilJugador/:ID_Servidor': PerfilJugador,
   '/PerfilEquipo/:ID_Equipo': PerfilEquipo,
   '/PerfilTorneo/:ID_torneo': PerfilTorneo
