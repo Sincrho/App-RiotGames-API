@@ -60,7 +60,7 @@
             </div>
           </div>
           <div class = "container">
-              <a style="color:white" href="" class="waves-effect waves-light btn deep- blue darken-1" on:click={()=> crearJugador()}><i class="material-icons left white-text ">check_circle</i>Agregar</a>
+            <button class ="waves-effect waves-light btn deep- blue darken-1" on:click={()=> crearJugador()}><i class="material-icons left white-text">check_circle</i>Agregar</button> 
           </div>
         </div>
       </div>

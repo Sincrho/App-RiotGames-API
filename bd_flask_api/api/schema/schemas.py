@@ -1,8 +1,8 @@
 from marshmallow import Schema,fields
 
-class JugadorSchema(Schema):
+class JugadorSchema(Schema): #Los jugadores tienen un estructura que son estos 3 campos.
   class Meta:
-    fields = ('id_jugador', 'id_servidor', 'nombre_jugador')
+    fields = ('id_jugador', 'id_servidor', 'nombre_jugador') 
 
 class EquipoSchema(Schema):
   class Meta:

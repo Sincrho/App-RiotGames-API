@@ -22,10 +22,10 @@ JUGADOR_UPDATE_TEST = {
 
 class TestGetJugadores(TestCase):
     def setUp(self):
-        self.app = create_app().test_client()
+        self.app = create_app().test_client()#haceme un cliente de pruebas
 
-    def test_get_jugadores(self):
-        response = self.app.get('/get_jugadores')
+    def test_get_jugadores(self): 
+        response = self.app.get('/get_jugadores') #de la app que acabas de crear haceme un get_jugadores
         statuscode = response.status_code
         #Test que el status sea 200
         self.assertEqual(statuscode, 200)

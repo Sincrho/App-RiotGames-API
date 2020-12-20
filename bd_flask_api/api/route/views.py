@@ -43,9 +43,8 @@ def add_jugador():
 
   db_session.add(new_jugador)
   db_session.commit()
-
   return jsonify(jugador_schema.dump(new_jugador))
-
+  
 def get_jugadores():
   """ 
   file: descriptions/Jugadores/get_jugadores.yml
@@ -355,7 +354,7 @@ def add_equi_torneo_partida():
 #FUNCIONES PARA PEGARLE A RITO
 
 def get_perfil(id_servidor,nombre_jugador):
-  apiKey=""
+  apiKey="RGAPI-514f29e9-8a62-4789-9d6b-641ad2615fb8"
   request_summoner  = requests.get("https://"+id_servidor+".api.riotgames.com/lol/summoner/v4/summoners/by-name/"+nombre_jugador+"?api_key="+apiKey)
   summoner=json.loads(request_summoner.text)
   summoner_id=summoner["id"]

@@ -14,9 +14,9 @@
 
   onMount(async function() {
            const response = await fetch(apiURLGetPerfilRiot+parametros[0]+"/"+parametros[1]);
-           let json  = await response.json();
-           dataPerfil = JSON.parse(json);
-           //console.log(dataPerfil)
+           let json  = JSON.parse(await response.json());
+           dataPerfil = json;
+           console.log(dataPerfil)
       });
       
     

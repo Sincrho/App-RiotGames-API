@@ -31,10 +31,10 @@
               "id_jugador": selected
             })
         });
-    const json = await response.json()
-    let result = JSON.stringify(json)
+    //const json = await response.json()
+    //let result = JSON.stringify(json)
     location.href = "/#/PerfilEquipo/"+idEquipo;
-    console.log(result)
+    //console.log(result)
   }
 
 </script>

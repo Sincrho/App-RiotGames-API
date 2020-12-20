@@ -16,8 +16,7 @@
   let dataEquiposTorneo = [];
   //let dataEquiposTorneo = [];
   
-
-
+  
 
 
   
@@ -34,14 +33,16 @@
         dataEquiposTorneo = dataEquiposTorneoAux; // svelte no reacciona push.....
     });
     
+
+   
     onMount(async function() {
-      let dataMatchesAux= [];
+      let dataMatchesAux= []; //-> resultado partida !! EQuipo 1 !! Equipo 2
       const response = await fetch(apiURLGetEquistorneoPartida+idTorneo); // traemos las partidas de los equipos en 1 torneo 
       let dataEquiposTorneoPartida  = await response.json(); // response tiene la relacion equitornepartida (id_torneo,id_equipo,id_partida)
       dataEquiposTorneoPartida.sort(GetSortOrder("id_partida"));// ordenar por id partida para poder tomar de a pares
       console.log(dataEquiposTorneoPartida);
       for(let i = 0; i < dataEquiposTorneoPartida.length; i = i+2) { // una partida tiene 2 equipos por eso, hacemos un for que recorre el json de a pares 
-        let dataMatchAux = {}; // creamos un json que va a tener todos los datos de una partida( sus equipos y su resultado)
+        let dataMatchAux = {}; // creamos un json que va a tener todos los datos de una partida( sus equipos y su resultado) //// resultado partida !! EQuipo 1 !! Equipo 2
         const respuestaEquipo1 = await fetch(apiURLGetEquipo+dataEquiposTorneoPartida[i].id_equipo); // obtener datos equipo 1 
         let jsonEquipo1  = await respuestaEquipo1.json();
         //console.log(jsonEquipo1);//equipo 1  
@@ -54,12 +55,14 @@
         dataMatchAux.resultado_partida = jsonPartida.resultado_partida;
         dataMatchAux.id_equipo1 = jsonEquipo1.id_equipo;
         dataMatchAux.equipo1 = jsonEquipo1.nombre_equipo;
-        dataMatchAux.equipo2 = jsonEquipo2.nombre_equipo;
         dataMatchAux.id_equipo2 = jsonEquipo2.id_equipo;
+        dataMatchAux.equipo2 = jsonEquipo2.nombre_equipo;
+        console.log(dataMatchAux);
         dataMatchesAux.push(dataMatchAux);
-       
       } 
+
       dataMatches = dataMatchesAux; // svelte no reacciona a push...
+      console.log(dataMatches);
     });
 
     function GetSortOrder(prop) {    // es para ordenar un array de json con (id_partida)
@@ -86,23 +89,15 @@
     
 
     async function BorrarPartidaEquipoTorneo(p_idPartida,p_equipo1,p_equipo2) {
-      eliminarEquiTornePartida(p_idPartida,p_equipo1);// eliminar la partida con el equipo 1
-      eliminarEquiTornePartida(p_idPartida,p_equipo2);// eliminar la partida con el equipo 2
-      eliminarPartida(p_idPartida); 
-      location.reload();
+      //await eliminarEquiTornePartida(p_idPartida,p_equipo1,p_equipo2);// eliminar la partida con el equipo 1
+      await eliminarEquiTornePartida22(p_idPartida,p_equipo1);
+      await eliminarEquiTornePartida22(p_idPartida,p_equipo2);// eliminar la partida con el equipo 2
+      eliminarPartida(p_idPartida);
+      location.reload(); 
     }
 
     async function eliminarPartida(p_idPartida) { // elimina la partida de la tabla partidas
       const response= await fetch(apiURLDelPartida+p_idPartida,{
-              method: 'DELETE'
-          });
-      //const json = await response.json()
-      //let result = JSON.stringify(json)
-      //console.log(result)
-    }
-
-    async function eliminarEquiTornePartida(p_idPartida, p_idEquipo){ // elimina la relacion equipo torneo partida
-      const response= await fetch(apiURLDelEquiTorneoPartida+p_idEquipo+"/"+idTorneo+"/"+p_idPartida,{
               method: 'DELETE'
           });
       const json = await response.json()
@@ -110,6 +105,28 @@
       console.log(result)
     }
 
+    async function eliminarEquiTornePartida22(p_idPartida, p_idEquipo){ // elimina la relacion equipo torneo partida
+      const response= await fetch(apiURLDelEquiTorneoPartida+p_idEquipo+"/"+idTorneo+"/"+p_idPartida,{
+              method: 'DELETE'
+          });
+      const json = await response.json()
+      let result = JSON.stringify(json)
+      console.log(result)
+    }
+    /*
+    async function eliminarEquiTornePartida(p_idPartida, p_idEquipo1,p_idEquipo2){ // elimina la relacion equipo torneo partida
+      const response= await fetch(apiURLDelEquiTorneoPartida+p_idEquipo1+"/"+idTorneo+"/"+p_idPartida,{
+              method: 'DELETE'
+          });
+      const response2= await fetch(apiURLDelEquiTorneoPartida+p_idEquipo2+"/"+idTorneo+"/"+p_idPartida,{
+              method: 'DELETE'
+          });
+      const json = await response.json()
+      let result = JSON.stringify(json)
+      console.log(result)
+      eliminarPartida(p_idPartida);
+    }
+    */
 </script>
 
 <body style="background-image: url(https://lolstatic-a.akamaihd.net/rso-login-page/2.9.34/assets/riot_desktop_background_2x.jpg)">
@@ -151,7 +168,7 @@
               <td class="blue-text"><a href="/#/PerfilEquipo/{row.id_equipo2}">{row.equipo2}</a></td>
               <td>
                 <a href="/#/EditarPartida/{row.id_partida}"><i class="material-icons left blue-text">edit</i></a>
-                <a href="#0" on:click={()=> BorrarPartidaEquipoTorneo(row.id_partida,row.id_equipo1,row.id_equipo2)}><i class="material-icons left blue-text ">delete</i></a>
+                <a style="cursor:pointer;" on:click={()=> BorrarPartidaEquipoTorneo(row.id_partida,row.id_equipo1,row.id_equipo2)}><i class="material-icons left blue-text ">delete</i></a>
               </td>
               </tr>
             {/each}

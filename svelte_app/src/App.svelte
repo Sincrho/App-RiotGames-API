@@ -1,5 +1,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js">
 	import Router, {location, link} from 'svelte-spa-router';
+
+  import Home from './Home.svelte';
   import Jugadores from './Jugadores.svelte';
   import Torneos from './Torneos.svelte';
   import Partidas from './Partidas.svelte';
@@ -21,6 +23,7 @@
   import NuevoEquipoTorneo from './NuevoEquipoTorneo.svelte';
   import NuevoEquipoTorneoPartida from './NuevoEquipoTorneoPartida.svelte';
   import NuevoJugadorEquipo from './NuevoJugadorEquipo.svelte';
+
 </script>
 
 
@@ -50,7 +53,9 @@
 </nav>
 
 <Router routes={{
-	'/': Jugadores,
+	'/': Home,
+  '/Home':Home,
+
 	'/EditarJugador/:ID_Jugador': EditarJugador,
   '/Jugadores': Jugadores,
   '/NuevoJugador': NuevoJugador,

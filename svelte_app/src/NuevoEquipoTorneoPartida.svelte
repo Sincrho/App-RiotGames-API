@@ -33,7 +33,7 @@
   async function insertarPartidaTorneo() {
 
     if (selectedEquipo1 != selectedEquipo2 && selectedEquipo1!= null && selectedEquipo2!=null ){
-      const partida=JSON.parse (await crearPartida());
+      const partida= await crearPartida();
       // insertamos la partida con sus dos equipos a un torneo, por eso se hace la misma consulta 2 veces
       const response= await fetch(apiURLAddEquiTorneoPartida,{
             method: 'POST', 
